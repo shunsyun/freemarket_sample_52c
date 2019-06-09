@@ -39,7 +39,7 @@ Things you may want to cover:
 |tel                 |integer  |unique: true |
 |credit_card         |integer  |
 |image               |string  |
-|text                |text    |
+|profile             |text    |
 |nickname            |string  |
 |item_id             |references  |foreign_key: true |
 
@@ -60,7 +60,7 @@ Things you may want to cover:
 |------|----|-------|
 |name              |string  |null: false |
 |description       |text    |null: false |
-|status            |string  |null: false |
+|status            |enum    |null: false |
 |trade_status      |string  |
 |delivery_change   |string  |
 |delivery_days     |string  |
@@ -70,7 +70,7 @@ Things you may want to cover:
 |like_id           |references |foreign_key:true|
 |comment_id        |references |foreign_key:true|
 |bland_id          |references |foreign_key:true|
-|user_id           |references |foreign_key:true|
+|seller_id           |references |foreign_key:true|
 |image_id          |references |foreign_key:true|
 |region_id         |references |foreign_key:true|
 |customer_id       |references |foreign_key:true|
@@ -115,7 +115,7 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |name       |string    | 
-|item_id    |references    |foreign_key: true    |
+
 
 
 ### Association
