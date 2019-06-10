@@ -187,9 +187,5 @@ Things you may want to cover:
 |customer_id   |references    |foreign_key: true    |
 |card_id       |references    |foreign_key: true    |
 
-### Association
+### Associations
 - belongs_to :user
-
-
-
-hello world4
