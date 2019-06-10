@@ -21,7 +21,7 @@ development:
   <<: *default
   database: freemarket_sample_52c_development
   username: root
-  password: <%= ENV['mercari52c'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
   socket: /var/lib/mysql/mysql.sock
 
 # Warning: The database defined as "test" will be erased and
