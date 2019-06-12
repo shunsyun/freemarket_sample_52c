@@ -65,8 +65,6 @@ group :production do
   gem 'unicorn', '5.4.1'
 end
 
-gem 'haml-rails'
-
 group :development, :test do
   gem 'capistrano'
   gem 'capistrano-rbenv'
@@ -76,3 +74,5 @@ group :development, :test do
 end
 
 gem 'pry-rails'
+gem 'haml-rails'
+gem "font-awesome-rails"
