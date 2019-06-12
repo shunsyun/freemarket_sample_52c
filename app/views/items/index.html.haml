@@ -2,7 +2,7 @@
   = render partial:"header"
   .main
     .carousel
-      %img.carousel__image{src:"https://www-mercari-jp.akamaized.net/assets/img/common/jp/top/main_content_pc.png?582218381"}
+      = image_tag "https://www-mercari-jp.akamaized.net/assets/img/common/jp/top/main_content_pc.png?582218381", size: "390x1000", alt: "カルーセル（仮）", class: "carousel__image"
     .pickup
       %h2.pickup__heading ピックアップカテゴリー
       .pickup__item
@@ -14,7 +14,7 @@
             =link_to do
               .pickup__item__box__content__link
                 .pickup__item__box__content__link__figure
-                  %image.pickup__item__box__content__link__figure__image{src:"https://static.mercdn.net/item/detail/orig/photos/m12495177869_1.jpg?1560231148",width:"213",height:"220"}
+                  = image_tag "https://static.mercdn.net/item/detail/orig/photos/m12495177869_1.jpg?1560231148", size: "213x220", alt: "商品（仮）", class: "pickup__item__box__content__link__figure__image"
                 .pickup__item__box__content__link__body
                   %h3.pickup__item__box__content__link__body__name Tシャツ
                   .pickup__item__box__content__link__body__num
@@ -24,7 +24,7 @@
             =link_to do
               .pickup__item__box__content__link
                 .pickup__item__box__content__link__figure
-                  %image.pickup__item__box__content__link__figure__image{src:"https://static.mercdn.net/item/detail/orig/photos/m12495177869_1.jpg?1560231148",width:"213",height:"220"}
+                  = image_tag "https://static.mercdn.net/item/detail/orig/photos/m12495177869_1.jpg?1560231148", size: "213x220", alt: "商品（仮）", class: "pickup__item__box__content__link__figure__image"
                 .pickup__item__box__content__link__body
                   %h3.pickup__item__box__content__link__body__name Tシャツ
                   .pickup__item__box__content__link__body__num
@@ -34,7 +34,7 @@
             =link_to do
               .pickup__item__box__content__link
                 .pickup__item__box__content__link__figure
-                  %image.pickup__item__box__content__link__figure__image{src:"https://static.mercdn.net/item/detail/orig/photos/m12495177869_1.jpg?1560231148",width:"213",height:"220"}
+                  = image_tag "https://static.mercdn.net/item/detail/orig/photos/m12495177869_1.jpg?1560231148", size: "213x220", alt: "商品（仮）", class: "pickup__item__box__content__link__figure__image"
                 .pickup__item__box__content__link__body
                   %h3.pickup__item__box__content__link__body__name Tシャツ
                   .pickup__item__box__content__link__body__num
@@ -44,7 +44,7 @@
             =link_to do
               .pickup__item__box__content__link
                 .pickup__item__box__content__link__figure
-                  %image.pickup__item__box__content__link__figure__image{src:"https://static.mercdn.net/item/detail/orig/photos/m12495177869_1.jpg?1560231148",width:"213",height:"220"}
+                  = image_tag "https://static.mercdn.net/item/detail/orig/photos/m12495177869_1.jpg?1560231148", size: "213x220", alt: "商品（仮）", class: "pickup__item__box__content__link__figure__image"
                 .pickup__item__box__content__link__body
                   %h3.pickup__item__box__content__link__body__name Tシャツ
                   .pickup__item__box__content__link__body__num
@@ -62,7 +62,7 @@
             =link_to do
               .pickup__item__box__content__link
                 .pickup__item__box__content__link__figure
-                  %image.pickup__item__box__content__link__figure__image{src:"https://static.mercdn.net/item/detail/orig/photos/m12495177869_1.jpg?1560231148",width:"213",height:"220"}
+                  = image_tag "https://static.mercdn.net/item/detail/orig/photos/m12495177869_1.jpg?1560231148", size: "213x220", alt: "商品（仮）", class: "pickup__item__box__content__link__figure__image"
                 .pickup__item__box__content__link__body
                   %h3.pickup__item__box__content__link__body__name Tシャツ
                   .pickup__item__box__content__link__body__num
@@ -72,7 +72,7 @@
             =link_to do
               .pickup__item__box__content__link
                 .pickup__item__box__content__link__figure
-                  %image.pickup__item__box__content__link__figure__image{src:"https://static.mercdn.net/item/detail/orig/photos/m12495177869_1.jpg?1560231148",width:"213",height:"220"}
+                  = image_tag "https://static.mercdn.net/item/detail/orig/photos/m12495177869_1.jpg?1560231148", size: "213x220", alt: "商品（仮）", class: "pickup__item__box__content__link__figure__image"
                 .pickup__item__box__content__link__body
                   %h3.pickup__item__box__content__link__body__name Tシャツ
                   .pickup__item__box__content__link__body__num
@@ -133,7 +133,7 @@
             %li.footer__content__box__mass__list 日本
             %li.footer__content__box__mass__list United State
       .footer__content__bottom
-        %image.footer__content__bottom__icon{src:"//www-mercari-jp.akamaized.net/assets/img/common/common/logo-white.svg?4069491723",width:"124",height:"33"}
+        = image_tag "//www-mercari-jp.akamaized.net/assets/img/common/common/logo-white.svg?4069491723", size: "124x33", alt: "メルカリアイコン", class: "footer__content__bottom__icon"
         %span.footer__content__bottom__copy-right
           %small © 2019 Mercari
   .sell-btn
