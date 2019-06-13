@@ -4,7 +4,7 @@
       %h1.header__box__top__logo
         = link_to "#" do
           .header__box__top__logo__link
-            = image_tag "https://www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?3270184656", size: "134x36", alt: "メルカリロゴ", class: "header__box__top__link__image"
+            -# = image_tag "https://www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?3270184656", size: "134x36", alt: "メルカリロゴ", class: "header__box__top__link__image"
       -# To Do
       -# = form_for  html: {class: :header__box__top__search} do |f|
       -#   = f.text_field :content, class: 'header__box__top__search__box', placeholder: '何かお探しですか？',type:"search",name:"keyword"
@@ -44,5 +44,6 @@
             =link_to "#" do
               .header__box__nav__right__content__list__link
                 .header__box__nav__right__content__list__link__figure
-                  = image_tag "//static.mercdn.net/images/member_photo_noimage_thumb.png", size: "30x30", alt: "ユーザーロゴ", class: "header__box__nav__right__content__list__link__figure__image"
+                  .header__box__nav__right__content__list__link__figure__image
+                  -# = image_tag "member_photo_noimage_thumb.png", size: "30x30", alt: "ユーザーロゴ", class: "header__box__nav__right__content__list__link__figure__image"
                   %span.header__box__nav__right__content__list__link__figure__text マイページ
