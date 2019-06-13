@@ -3,153 +3,153 @@
   text-decoration:none;
 }
 
-.header{
-  height:100px;
-  width:100%;
-  position: relative;
-  background-color:white;
-  &__box{
-    width: 1020px;
-    margin: 0 auto;
-    padding: 8px 0 0;
-    background-color:white;
-    &__top{
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      &__logo{
-        display: block;
-        color: #333;
-        &__link{
+// .header{
+//   height:100px;
+//   width:100%;
+//   position: relative;
+//   background-color:white;
+//   &__box{
+//     width: 1020px;
+//     margin: 0 auto;
+//     padding: 8px 0 0;
+//     background-color:white;
+//     &__top{
+//       display: flex;
+//       align-items: center;
+//       justify-content: space-between;
+//       &__logo{
+//         display: block;
+//         color: #333;
+//         &__link{
 
-          &__image{
-            vertical-align: middle; 
-          }
-        }
-      }
-      &__search{
-        position: relative;
-        margin-left: 45px;
-        width: 100%;
-        &__box{
-          background: #f5f5f5;
-          border-radius: 4px;
-          padding: 0 42px 0 10px;
-          width: 100%;
-          height: 40px;
-          line-height: 1.5;
-          font-size: 16px;
-            &__icon{
-              background: rgb(102, 102, 102);
-              border-top-right-radius: 4px;
-              border-bottom-right-radius:4px;
-              position: absolute;
-              top: 0;
-              right: 0;
-              display: flex;
-              height:40px;
-              width: 40px;
-              height: 40px;
-              cursor: pointer;
-              font: 14px FontAwesome;
-              color: rgb(255, 255, 255);
-              justify-content: center;
-              align-items: center;
-          }
-        }
-      }
-    }
-    &__nav{
-      margin: 8px 0 0;
-      height:32px;
-      &__left{
-        float: left;
-        line-height:32px;
-        display:block;
-        &__content{
-          list-style: none;
-          &__list{
-            padding-left: 0;
-            position: relative;
-            display: inline-block;
-            padding: 0 11px;
-            cursor: pointer;
-            &__heading{
-              font-size: 14px;
-              font-weight: 400;
-              &__link{
-                text-decoration: none;
-                position: relative;
-                height: 32px;
-                line-height: 32px;
-                &__icon{
-                  color: #ea352d;
-                  font-size: 12px;
-                  margin-right: 4px;
-                  font:20px FontAwesome;
-                }
-                &__text{
-                  vertical-align: middle;
-                  font-weight: bold;
-                }
-              }
-            }
-          }
-        }
-      }
-      &__right{
-        float: right;
-        line-height:32px;
-        display:block;
-        &__content{
-          list-style: none;
-          &__list{
-            position: relative;
-            display: inline-block;
-            padding: 0 7px;
-            cursor: pointer;
-            padding: 0 14px;
-            &__link{
-              position: relative;
-              display: block;
-              height: 32px;
-              line-height: 32px;
-              font-size: 0;
-              color: #333;
-              &__icon{
-                color: #ccc;
-                font-size: 12px;
-                margin-right: 4px;
-                font:20px FontAwesome;
-                display:inline-block;
-              }
-              &__text{
-                margin-left: 10px;
-                font-size: 14px;
-                line-height:32px;
-              }
-              &__figure{
-                display:inline-block;
-                margin:0;
-                padding:0;
-                &__image{
-                  border-radius: 50%;
-                  vertical-align:center;
-                }
-                &__text{
-                  margin-left: 10px;
-                  font-size: 14px;
-                  line-height:32px;
-                  vertical-align:center;
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
+//           &__image{
+//             vertical-align: middle; 
+//           }
+//         }
+//       }
+//       &__search{
+//         position: relative;
+//         margin-left: 45px;
+//         width: 100%;
+//         &__box{
+//           background: #f5f5f5;
+//           border-radius: 4px;
+//           padding: 0 42px 0 10px;
+//           width: 100%;
+//           height: 40px;
+//           line-height: 1.5;
+//           font-size: 16px;
+//             &__icon{
+//               background: rgb(102, 102, 102);
+//               border-top-right-radius: 4px;
+//               border-bottom-right-radius:4px;
+//               position: absolute;
+//               top: 0;
+//               right: 0;
+//               display: flex;
+//               height:40px;
+//               width: 40px;
+//               height: 40px;
+//               cursor: pointer;
+//               font: 14px FontAwesome;
+//               color: rgb(255, 255, 255);
+//               justify-content: center;
+//               align-items: center;
+//           }
+//         }
+//       }
+//     }
+//     &__nav{
+//       margin: 8px 0 0;
+//       height:32px;
+//       &__left{
+//         float: left;
+//         line-height:32px;
+//         display:block;
+//         &__content{
+//           list-style: none;
+//           &__list{
+//             padding-left: 0;
+//             position: relative;
+//             display: inline-block;
+//             padding: 0 11px;
+//             cursor: pointer;
+//             &__heading{
+//               font-size: 14px;
+//               font-weight: 400;
+//               &__link{
+//                 text-decoration: none;
+//                 position: relative;
+//                 height: 32px;
+//                 line-height: 32px;
+//                 &__icon{
+//                   color: #ea352d;
+//                   font-size: 12px;
+//                   margin-right: 4px;
+//                   font:20px FontAwesome;
+//                 }
+//                 &__text{
+//                   vertical-align: middle;
+//                   font-weight: bold;
+//                 }
+//               }
+//             }
+//           }
+//         }
+//       }
+//       &__right{
+//         float: right;
+//         line-height:32px;
+//         display:block;
+//         &__content{
+//           list-style: none;
+//           &__list{
+//             position: relative;
+//             display: inline-block;
+//             padding: 0 7px;
+//             cursor: pointer;
+//             padding: 0 14px;
+//             &__link{
+//               position: relative;
+//               display: block;
+//               height: 32px;
+//               line-height: 32px;
+//               font-size: 0;
+//               color: #333;
+//               &__icon{
+//                 color: #ccc;
+//                 font-size: 12px;
+//                 margin-right: 4px;
+//                 font:20px FontAwesome;
+//                 display:inline-block;
+//               }
+//               &__text{
+//                 margin-left: 10px;
+//                 font-size: 14px;
+//                 line-height:32px;
+//               }
+//               &__figure{
+//                 display:inline-block;
+//                 margin:0;
+//                 padding:0;
+//                 &__image{
+//                   border-radius: 50%;
+//                   vertical-align:center;
+//                 }
+//                 &__text{
+//                   margin-left: 10px;
+//                   font-size: 14px;
+//                   line-height:32px;
+//                   vertical-align:center;
+//                 }
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
 .main{
   .carousel{
     clear:both;
@@ -157,6 +157,7 @@
     overflow: hidden;
     position: relative;
     &__image{
+      background-color:black;
       height:390px;
       width:100%;
     }
@@ -235,11 +236,73 @@
   }
 }
 .aside{
-  height:300px;
-  width:100%;
-  background: url("UNADJUSTEDNONRAW_thumb_1a.jpg");
+  background-color:black;
+  // background: url("/jp/assets/img/common/jp/top/download_bg_pc.jpg?21750775");
   background-position: center;
   background-size: cover;
+  &__banner{
+    width: 750px;
+    height: 260px;
+    margin: 0 auto;
+    color: #fff;
+    position: relative;
+    &__left{
+      position: absolute;
+      top: 20%;
+      left: 16px;
+      &__title{
+        font-size: 16px;
+      }
+      &__Advertising{
+        font-size: 24px;
+        margin: 10px 0 0;
+      }
+      &__icon{
+        margin: 20px 0 0;
+        line-height: 68px;
+        &__image{
+          background: image-url("mercari_icon.png");
+          background-position: center;
+          background-size: cover;
+          height:68px;
+          width:68px;
+          float: left;
+        }
+        &__link{
+          margin: 0 0 0 24px;
+          list-style: none;
+          float: left;
+          &__app{
+            float: left;
+            background: image-url("app-icon.png");
+            background-position: center;
+            background-size: cover;
+            height:40px;
+            width:133px;
+          }
+          &__google{
+            float: left;
+            margin: 0 0 0 16px;
+            background: image-url("google-icon.png");
+            background-position: center;
+            background-size: cover;
+            height:40px;
+            width:133px;
+          }
+        }
+      }
+    }
+    &__right{
+      float:right;
+      &__image{
+        background: image-url("download_content_pc.png");
+        background-position: center;
+        background-size: cover;
+        height: 260px;
+        width:300px;
+      }
+    }
+  }
 }
 .footer{
   padding: 0 20px 10px 20px;
@@ -305,7 +368,11 @@
       &__icon{
         display: inline-block;
         margin-right: 10px;
-        width: auto;
+        background: image-url("mercari-logo_white.png");
+        background-position: center;
+        background-size: cover;
+        height:31px;
+        width:124px;
       }
       &__copy-right{
         color:#fff;
