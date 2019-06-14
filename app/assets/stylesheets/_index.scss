@@ -157,7 +157,7 @@
     overflow: hidden;
     position: relative;
     &__image{
-      background-color:black;
+      background:image-url("banner.jpg");
       height:390px;
       width:100%;
     }
@@ -236,8 +236,7 @@
   }
 }
 .aside{
-  background-color:black;
-  // background: url("/jp/assets/img/common/jp/top/download_bg_pc.jpg?21750775");
+  background: image-url("background-image.jpg");
   background-position: center;
   background-size: cover;
   &__banner{
