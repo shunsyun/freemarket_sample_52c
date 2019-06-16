@@ -3,4 +3,6 @@ Rails.application.routes.draw do
 
   root "items#index"
 
+  get "tests/credit_card" => "tests#credit_card"
+
 end

@@ -1,0 +1,119 @@
+.wrapper
+  = render partial:"items/header"
+  .bread-crumbs
+  .container
+    .content-side-bar
+    .content
+      .content__chapter1
+        %h2.content__chapter1__head 
+          クレジットカード情報入力
+        %form.card-form
+          .card-form__input
+          .card-form__box
+            .form-number
+              %label.form-number__payment カード番号
+              %span.form-number__require 必須
+              %input.form-number__input{type:"text",placeholder:"半角数字のみ",maxlength:"19"}
+              %ul.form-number__error-text
+              %ul.form-number__card-list
+                %li.form-number__card-list__visa
+                  = image_tag"visa.png",width:"45",height:"20"
+                %li.form-number__card-list__master
+                  = image_tag"master.png",width:"30",height:"20"
+                %li.form-number__card-list__saison
+                  = image_tag"seison.png",width:"30",height:"20"
+                %li.form-number__card-list__jcb
+                  = image_tag"jcb.png",width:"30",height:"20"
+                %li.form-number__card-list__american
+                  = image_tag"american.png",width:"21",height:"20"
+                %li.form-number__card-list__dainers
+                  = image_tag"diners.png",width:"30",height:"20"
+                %li.form-number__card-list__discover
+                  = image_tag"discover.png",width:"30",height:"20"
+            .form-signup
+              %label.form-signup__expire カード番号
+              %span.form-signup__require 必須
+              %br
+              .form-signup__month
+                %select.form-signup__month__select
+                  %option{value:"1"} 01
+                  %option{value:"2"} 02
+                  %option{value:"3"} 03
+                  %option{value:"4"} 04
+                  %option{value:"5"} 05
+                  %option{value:"6"} 06
+                  %option{value:"7"} 07
+                  %option{value:"8"} 08
+                  %option{value:"9"} 09
+                  %option{value:"10"} 10
+                  %option{value:"11"} 11
+                  %option{value:"12"} 12
+                %i.form-signup__month__icon.fas.fa-chevron-down
+              %span.form-signup__str 月
+              %br
+              .form-signup__year
+                %select.form-signup__month__select
+                  %option{value:"19"} 19
+                  %option{value:"20"} 20
+                  %option{value:"21"} 21
+                  %option{value:"22"} 22
+                  %option{value:"23"} 23
+                  %option{value:"24"} 24
+                  %option{value:"25"} 25
+                  %option{value:"26"} 26
+                  %option{value:"27"} 27
+                  %option{value:"28"} 28
+                  %option{value:"29"} 29
+                %i.form-signup__month__icon.fas.fa-chevron-down
+              %span.form-signup__str 年
+            .form-security
+              %label.form-security__expire セキュリティコード
+              %span.form-security__require 必須
+              %input.form-security__input{placeholder:"カード背面４桁もしくは３桁の番号"}
+              %ul.form-security__error-message
+              .form-security__info 
+                %span.form-security__info__question ?
+                カード裏面の番号とは？
+            %input.user_id{type:"hidden"}
+            %input.encrypted_card_data{type:"hidden"}
+            %p.has-error-text
+            %input{type:"hidden",value_name:"after_save_callback"}
+            .form-btn{type:"button",id:"submit_btn"}
+              追加する
+      .content__chapter2
+        %h2.content__chapter2__head 
+          支払い方法
+        .card-index
+          %section.card-index__title
+            .card-index__title__head
+              %h3.card-index__title__head__sub クレジットカード一覧
+            %ul.card-index__title__list
+          %section.card-index__add
+            .card-index__add__card 
+              =link_to "#" do
+                %a.card-index__add__card__text 
+                  %i.card-index__add__card__icon.far.fa-credit-card
+                    クレジットカードを追加
+          .card-index__regist
+            %a.card-index__regist__link
+              %span.card-index__regist__link__text 支払い方法について
+              %i.card-index__regist__link__icon.fas.fa-chevron-right
+      .content__chapter3
+        %h2.content__chapter3__head 
+          支払い方法
+        .card-index
+          %section.card-index__title
+            .card-index__title__head
+              %h3.card-index__title__head__sub クレジットカード一覧
+            %ul.card-index__title__list
+              %li.card-detail
+                %form.card-detail__form
+                  %figure
+                    =image_tag"visa.png",class:"card-detail__form__image"
+                  .card-detail__form__num ***********1234
+                  .card-detail__form__limit-num 01/19
+                  %button.card-detail__form__remove 削除する
+          .card-index__regist
+            %a.card-index__regist__link
+              %span.card-index__regist__link__text 支払い方法について
+              %i.card-index__regist__link__icon.fas.fa-chevron-right
