@@ -3,5 +3,7 @@ Rails.application.routes.draw do
 
   root "items#index"
   resources :wallets, only: [:new]
+  resources :items, only:[:index]
+  get "items/delete" => "items#delete"
 
 end
