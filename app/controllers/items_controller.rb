@@ -5,4 +5,7 @@ class ItemsController < ApplicationController
   def delete
   end
 
+  def mypage
+  end
+
 end
