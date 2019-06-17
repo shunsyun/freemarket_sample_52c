@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   resources :wallets, only: [:new]
   resources :items, only:[:index]
   get "items/delete" => "items#delete"
-  get'items/mypage'=>'items#mypage'#マイページ画面
-
+  # resources :items, only: :mypage do
+  #   collection do
+  get "mypage", to: "items#mypage", as: "mypage"
+  #   end
+  # end
 end

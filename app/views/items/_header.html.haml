@@ -41,7 +41,7 @@
                 %i.header__box__nav__right__content__list__link__icon.fas.fa-check
                 %span.header__box__nav__right__content__list__link__text やることリスト
           %li.header__box__nav__right__content__list
-            =link_to "items/mypage" do
+            =link_to mypage_path, method: :get do
               .header__box__nav__right__content__list__link
                 .header__box__nav__right__content__list__link__figure
                   .header__box__nav__right__content__list__link__figure__image
