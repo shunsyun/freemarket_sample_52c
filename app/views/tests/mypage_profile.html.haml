@@ -1,0 +1,17 @@
+.default-conteiner
+  %main.l-container__clearfix
+    .l-container__clearfix__content
+      %section.l-container__clearfix__content__chapter
+        %h2.l-container__clearfix__content__chapter__head プロフィール
+        %form{action: "https://www.m#rc#ri.com/jp/mypage/profile/", method: "POST", class:"l-container__clearfix__content__chapter__head__form"}
+          %input{name: "__csrf_value", type: "hidden", value: "#", class:"l-container__clearfix__content__chapter__head__input"}
+          .setting__profile-icon
+            %figure.setting__profile-icon__f
+              %img{src: "//static.mercdn.net/thumb/members/635145766.jpg?1481553385", class:"setting__profile-icon__f__img"}
+            %input{name: "nickname", placeholder: "例)AYA☆セール中", type: "text", value: "ニックネーム", class:"setting__profile-icon__input-default"}
+          .setting__profile-content
+            %textarea{class:"setting__profile-content__textarea-default", name: "introduction", placeholder: "例）こんにちは☆ ご覧いただきありがとうございます！かわいいものやきれいめオフィスカジュアル中心に出品しています。服のサイズは主に9号です。気持ちよくお取引できるよう心がけていますので、商品や発送方法などご質問がありましたらお気軽にどうぞ♪"}
+            %input{class:"setting__profile-content__input", name: "after_save_callback", type: "hidden", value: "https://www.m#rc#ri.com/jp/mypage/profile/"}
+            %button{class:"setting__profile-content__btn-red", type: "submit"} 変更する
+    .l-side{name: "試しおき"}
+      -# = render 'shared/side_bar'
