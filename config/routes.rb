@@ -4,10 +4,18 @@ Rails.application.routes.draw do
   root "items#index"
   resources :wallets, only: [:new]
   resources :items, only:[:index]
+  resources :users, only:[:index, :show, :new] do
+  collection do
+    get "number"
+    get "address"
+    get "done"
+    get "credit"
+  end
+end
+  
   get "items/delete" => "items#delete"
-  # resources :items, only: :mypage do
-  #   collection do
+
   get "mypage", to: "items#mypage", as: "mypage"
-  #   end
-  # end
+  
+  
 end
