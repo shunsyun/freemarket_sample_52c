@@ -2,8 +2,8 @@
   .single-header
     %h1.single-header__logo
       = link_to do
-        %img.mercari-logo{:alt => "mercari", :src => "https://www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?128691313"}/
-    %img.progress__bar__status__done{:src => "https://i.gyazo.com/b6d36eebb53b7c58bd69c2a5e7e4bff2.png"}/
+        =image_tag "https://www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?128691313", alt: "mercari", class: "mercari-logo" 
+    =image_tag "https://i.gyazo.com/b6d36eebb53b7c58bd69c2a5e7e4bff2.png", class: "progress__bar__status__done"
   %main.single-main
     .content-signin
       .content-signin__chapter1
@@ -100,6 +100,6 @@
           = link_to class: 'transaction' do
             特定商取引に関する表記
     = link_to class: 'single-footer-logo' do
-      %img.footer-logo{:alt => "mercari", :src => "//www-mercari-jp.akamaized.net/assets/img/common/common/logo-gray.svg?2855175014"}/
+      =image_tag "//www-mercari-jp.akamaized.net/assets/img/common/common/logo-gray.svg?2855175014", alt: "mercari", class: "footer-logo"
     %p.footer-century
       %small © 2019 Mercari
