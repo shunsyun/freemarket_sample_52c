@@ -8,6 +8,7 @@
   width:100%;
   position: relative;
   background-color:white;
+  box-shadow: 5px 0px 4px;
   &__box{
     width: 1020px;
     margin: 0 auto;
@@ -96,6 +97,7 @@
                 &__text{
                   vertical-align: middle;
                   font-weight: bold;
+                  color: black;
                 }
               }
             }

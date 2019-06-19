@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
   root "items#index"
   resources :wallets, only: [:new]
-  resources :items, only:[:index]
+  resources :items, only:[:index, :show]
   resources :users, only:[:index, :show, :new] do
   collection do
     get "number"
