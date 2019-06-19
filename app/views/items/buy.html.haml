@@ -1,0 +1,87 @@
+.wrapper
+  .wrapper__mercari-logo
+    = image_tag "image.png", size: "183x90", alt: "メルカリロゴ", class: "mercari-logo"
+
+  .header-buy
+    .header-buy__title
+      購入内容の確認
+
+  .section-buy
+    .section-buy__main
+      .section-buy__main__content-item
+        .section-buy__main__content-item__photo
+          = image_tag "item_purchace.jpg", size: "128x128", alt: "商品写真", class: "item-photo"
+        .section-buy__main__content-item__name
+          SUIT SELECT ブラックシャツ パンクコーデ v系
+        .section-buy__main__content-item__price-fee-box
+          .section-buy__main__content-item__price-fee-box__price
+            ¥ 1,880
+          .section-buy__main__content-item__price-fee-box__shipping-fee
+            送料込み
+      .section-buy__main__point
+        .section-buy__main__point__display
+          .section-buy__main__point__display__box
+            ポイントはありません
+      .section-buy__main__price
+        .section-buy__main__price__display
+          .section-buy__main__price__display__text
+            支払い金額
+        .section-buy__main__price__display
+          .section-buy__main__price__display__fee
+            ¥ 1,880
+      .section-buy__main__purchase
+        .section-buy__main__purchase__display
+          .section-buy__main__purchase__display__box
+          =link_to "#", class:"link-to-buy-box" do
+            購入する
+
+  .section-shipping
+    .section-shipping__adress
+      .section-shipping__adress__box
+        配送先
+      .section-shipping__adress__details
+        〒575-0061
+        %br/
+        大阪府 四條畷市 清滝中町2-30
+        %br/
+        松崎 健太
+      .section-shipping__adress__change
+        .section-shipping__adress__change__icon
+        =link_to "#", class:"link-to-change" do
+          変更する
+          %i.fa.fa-chevron-right
+  
+  .section-bottom
+    .section-bottom__purchase
+      .section-bottom__purchase__way
+        支払い方法
+      .section-bottom__purchase__card-number
+        ************5663
+        %br/
+        09 / 23
+      .section-bottom__purchase__card-company
+        = image_tag "vasa_logo.png", size: "49x15", alt: "カード会社ロゴ", class: "card-logo"
+      .section-bottom__purchase__change
+        .section-bottom__purchase__change
+        =link_to "#", class:"link-to-change" do
+          変更する
+          %i.fa.fa-chevron-right
+  
+  .footer-buy
+    .footer-buy__menu
+      .footer-buy__menu__list
+      =link_to "#", class:"link-to-bottom-icon" do
+        プライバシーポリシー
+      .footer-buy__menu__list
+      =link_to "#", class:"link-to-bottom-icon" do
+        メルカリ利用規約
+      .footer-buy__menu__list
+      =link_to "#", class:"link-to-bottom-icon" do
+        特定商取引に関する表記
+    .footer-buy__logo
+      .footer-buy__logo__mercari
+      =link_to "#", class:"link-to-bottom-mercari-icon" do
+        = image_tag "footer_logo.png", size: "130x65", alt: "フッターロゴ", class: "footer-logo"
+    .footer-buy__copyright
+      © 2019 Mercari
+      
