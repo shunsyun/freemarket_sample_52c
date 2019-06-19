@@ -24,4 +24,7 @@ Rails.application.routes.draw do
   end
 end
   get "mypage", to: "items#mypage", as: "mypage"
+  get "mypage/profile", to: "items#mypage_profile", as: "mypage/profile"
+  get "sell", to: "items#sell", as: "sell"
+  
 end
