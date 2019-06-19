@@ -169,7 +169,8 @@
                 電話番号の確認
                 %i.fa.fa-chevron-right
             %li.mypage--nav__ul__li
-              =link_to "#", class:"mypage--nav__ul__li__item2" do
+              = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn mypage--nav__ul__li__item2'
+              -# =link_to "#", class:"mypage--nav__ul__li__item2" do
                 ログアウト
                 %i.fa.fa-chevron-right
   .aside
