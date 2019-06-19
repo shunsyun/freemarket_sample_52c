@@ -1,8 +1,9 @@
 .wrapper
-  = render partial:"items/header"
-  .bread-crumbs
+  = render partial:"shared/header"
+  =render partial:"shared/bread_crumbs"
   .container
     .content-side-bar
+      = render partial:"shared/side_bar"
     .content
       .content__chapter1
         %h2.content__chapter1__head 
