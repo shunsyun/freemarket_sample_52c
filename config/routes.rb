@@ -16,6 +16,7 @@ end
   get "items/delete" => "items#delete"
 
   get "mypage", to: "items#mypage", as: "mypage"
+  get "mypage/profile", to: "items#mypage_profile", as: "mypage/profile"
   get "sell", to: "items#sell", as: "sell"
   
 end
