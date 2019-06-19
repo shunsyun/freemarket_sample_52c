@@ -20,7 +20,7 @@
                     .sell--dropbox--container__items__upload
                       %ul.sell--dropbox--container__items__upload__ul
                   .sell--upload--drop--box
-                    %input.sell--upload--drop--file{:multiple => "", :name => "image1", :style => "display: none;", :type => "file"}/
+                    %input.sell--upload--drop--file{multiple: "", name: "image1", style: "display: none;", type: "file"}/
                     %pre.visible--pc
                       ドラッグアンドドロップ
                       またはクリックしてファイルをアップロード
@@ -30,12 +30,12 @@
                     商品名
                     %span.form--require 必須
                   %div
-                    %input.input--default{:placeholder => "商品名（必須 40文字まで)", :value => ""}/
+                    %input.input--default{placeholder: "商品名（必須 40文字まで)", value: ""}/
                 .sell--content1__form2
                   %label.sell--content1__form2__label
                     商品の説明
                     %span.form--require 必須
-                  %textarea.textarea--default{:placeholder => "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。", :rows => "5"}
+                  %textarea.textarea--default{placeholder: "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。", rows: "5"}
               .sell--content2
                 %h3.sell--content2__head 商品の詳細
                 .sell--content2__form1
@@ -126,7 +126,7 @@
                         .l--right__price
                           ¥
                           %div.input--price
-                            %input.input--price__default{:placeholder => "例）300", :value => ""}/
+                            %input.input--price__default{placeholder: "例）300", value: ""}/
                     %li.cl1
                       .l--left__fee
                         販売手数料 (10%)
@@ -137,7 +137,7 @@
                         販売利益
                       .l--right__gain
                         (仮)10
-              .modal{:role => "dialog", :tabindex => "--1"}
+              .modal{role: "dialog", tabindex: "--1"}
                 .modal--inner
               .sell--content5
                 %div
@@ -158,7 +158,7 @@
                     =link_to "#", class: 'sell--content5__p__a' do
                       加盟店規約
                     に同意したことになります。
-                %button.btn--red{:type => "submit"}
+                %button.btn--red{type: "submit"}
                   出品する
                 %a.btn--gray もどる
   %footer.single--footer
@@ -173,7 +173,7 @@
         %li.single--footer__nav__ul__li3
           =link_to "#", class: '.single--footer__nav__ul__li3__a3' do
             特定商取引に関する表記
-    %a.single--footer--logo{:href => "#"}
+    =link_to "#", class: '.single--footer--logo' do
       %div.single--footer--logo__img
     %p
       %small © 2019 Mercari
