@@ -8,7 +8,6 @@ Rails.application.routes.draw do
   # resources :items, only: :mypage do
   #   collection do
   get "mypage", to: "items#mypage", as: "mypage"
-  get "mypage/profile", to: "items#mypage_profile", as: "mypage/profile"
   #   end
   # end
 end
