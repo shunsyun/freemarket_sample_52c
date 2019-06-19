@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   root "items#index"
+  get "items/delete" => "items#delete"
   resources :wallets, only: [:new]
   resources :items, only:[:index, :show]
   resources :users, only:[:index, :show, :new] do
@@ -22,10 +23,5 @@ Rails.application.routes.draw do
     get "credit"
   end
 end
-  
-  get "items/delete" => "items#delete"
-
   get "mypage", to: "items#mypage", as: "mypage"
-  
-  
 end

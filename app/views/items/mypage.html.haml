@@ -1,14 +1,6 @@
 .wrapper
-  = render partial:"header"
-  .bread
-    %nav.bread__crumbs
-      %ul.bread__crumbs__ul
-        %li.bread__crumbs__ul__li
-          =link_to "#", class: 'bread__crumbs__ul__li__a' do
-            %span メルカリ
-          %i.fa.fa-chevron-right
-        %li.bread__crumbs__ul__li
-          %span マイページ
+  = render partial:"shared/header"
+  = render partial:"shared/bread_crumbs"
   .wrapper2
     %main.l--container
       .l--content
@@ -169,8 +161,7 @@
                 電話番号の確認
                 %i.fa.fa-chevron-right
             %li.mypage--nav__ul__li
-              = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn mypage--nav__ul__li__item2'
-              -# =link_to "#", class:"mypage--nav__ul__li__item2" do
+              =link_to items_delete_path, class:"mypage--nav__ul__li__item2" do
                 ログアウト
                 %i.fa.fa-chevron-right
   .aside

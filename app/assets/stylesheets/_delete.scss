@@ -1,7 +1,7 @@
 .container{
   margin: 0 auto;
   width: 1020px;
-  height:100vh;
+  // height:100vh;
   background-color:#f5f5f5;
   padding-top:40px;
   .content-side-bar{
@@ -9,7 +9,59 @@
     width: 280px;
     margin: 0 40px 0 0;
     height:100%;
-    background-color:black;
+    .mypage--nav{
+      &__ul{
+        list-style: none;
+        &__li{
+          border-top: 1px solid #eee;
+          &__item{
+            background: #eee;
+            font-weight: 600;
+            position: relative;
+            display: block;
+            padding: 16px;
+            font-size: 14px;
+            color: #333;
+            text-decoration: none;
+            touch-action: manipulation;
+            .fa-chevron-right{
+              color: #333;
+              position: absolute;
+              right: 16px;
+              top: 50%;
+              transform: translate(0, -50%);
+              transition: all ease-out .2s;
+            }
+          }
+        }
+        &__li {
+          border-top: 1px solid #eee;
+          &__item2{
+            position: relative;
+            display: block;
+            padding: 16px;
+            background: #fff;
+            font-size: 14px;
+            color: #333;
+            text-decoration: none;
+            touch-action: manipulation;
+            .fa-chevron-right{
+              color: #ccc;
+              position: absolute;
+              right: 16px;
+              top: 50%;
+              transform: translate(0, -50%);
+              transition: all ease-out .2s;
+            }
+          }
+        }
+      }
+      .mypage--nav--head {
+        margin: 40px 0 0;
+        font-weight: bold;
+        font-size: 16px;
+      }
+    }
   }
   .content{
     width: 700px;
