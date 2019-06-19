@@ -1,0 +1,4 @@
+@mixin linkStyle($color: #00bfff, $text-decoration: none) {
+  color: $color;
+  text-decoration: $text-decoration;
+}
