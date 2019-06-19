@@ -1,6 +1,5 @@
 * {
   text-decoration: none;
-  color: black;
 }
 
 .single-container {
@@ -47,6 +46,26 @@
       &__content {
         max-width: 320px;
         margin: 0 auto;
+        &__icon{
+          position: absolute;
+          font: normal 30px FontAwesome;
+          margin-left: 5px;
+          top: 50%;
+          left: 16px;
+          -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+          color: white;
+        }
+        &__mail {
+          position: absolute;
+          font: normal 20px FontAwesome;
+          margin-left: 5px;
+          top: 50%;
+          left: 16px;
+          -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+          color: gray;
+        }
         .contents__btn{
           display: block;
           font-size: 14px;
@@ -84,27 +103,6 @@
   }
 }
 
-.fa-envelope-o {
-  position: absolute;
-  font: normal 20px FontAwesome;
-  margin-left: 5px;
-  top: 50%;
-  left: 16px;
-  -webkit-transform: translate(0, -50%);
-  transform: translate(0, -50%);
-  color: gray;
-}
-.fa-facebook-square {
-  position: absolute;
-  font: normal 30px FontAwesome;
-  margin-left: 5px;
-  top: 50%;
-  left: 16px;
-  -webkit-transform: translate(0, -50%);
-  transform: translate(0, -50%);
-  color: white;
-}
-
 .single-footer {
   text-align: center;
   width: 456px;
@@ -121,6 +119,9 @@
     &__content {
       display: inline-block;
       margin: 0 0 0 16px;
+      &__portion {
+        color: black;
+      }
     }
     li.single-footer__menu__content:hover {
       opacity: 0.7 ;
