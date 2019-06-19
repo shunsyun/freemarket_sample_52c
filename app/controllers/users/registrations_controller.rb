@@ -62,6 +62,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
   private
 
   def user_params
-    params.require(:user).permit(:family_name,:family_kana_name,:first_name,:first_kana_name,:email)
+    params.require(:user).permit(:family_name,:family_kana_name,:first_name,:first_kana_name,:birthday,:postal_code,:prefecture,:city,:block,:building,:tel,:credit_card,:image,:profile,:nickname,:email)
   end
 end
