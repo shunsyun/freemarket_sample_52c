@@ -1,4 +1,6 @@
 @import "./reset";
+@import "./config/colors";
+@import "./mixin/mixins";
 @import "./items";
 @import "font-awesome";
 @import "./index";
@@ -14,3 +16,4 @@
 @import "./users_signup/address";
 @import "./users_signup/credit";
 @import "./users_signup/done";
+@import "./identification";
