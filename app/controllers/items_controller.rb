@@ -8,4 +8,7 @@ class ItemsController < ApplicationController
   def mypage
   end
 
+  def show
+  end
+
 end
