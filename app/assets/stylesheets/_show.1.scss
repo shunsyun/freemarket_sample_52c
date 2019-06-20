@@ -1,0 +1,397 @@
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+.wrapper-show {
+  box-sizing: border-box;
+  background-color: #f5f5f5;
+  width: 100%;
+  .section {
+    height: 970px;
+    width: 700px;
+    background-color: #fff;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 24px;
+    &__item-name {
+      font-size: 22px;
+      font-weight: bold;
+      text-align: center;
+      word-wrap: break-word;
+      line-height: 1.4;
+      padding-top: 10px;
+    }
+    //↑ここまででメインの商品名↓以降は商品画像
+    &__main {
+      margin-top: 18px;
+      display: flex;
+      justify-content: center;
+      &__box__owl-carousel {
+        letter-spacing: normal;
+        &__stage__outer__active {
+          &__item-inner {
+            color: #fff;
+            .owl-lazy {
+              height: 300px;
+              width: 300px;
+            }
+          }
+        }
+        &__item-photo {
+          margin-top: -6px;
+          &__thumbnails {
+            &__inner {
+              float: left;
+              .owl-lazy-sub {
+                height: 60px;
+                width: 60px;
+              }
+            }
+          }
+        }
+      }
+
+      // ↓ここからは右側のbox
+      .table {
+        float: left;
+        margin-left: 20px;
+        &__tr {
+          display: table;
+          font-size: 13px;
+          color: #504946;
+          border-collapse: collapse;
+          margin-bottom: -1px;
+          &__th {
+            background-color: #f7f6f5;
+            border: solid 1px #efefef;
+            display: table-cell;
+            vertical-align: middle;
+            width: 120px;
+            span {
+              margin-left: 5px;
+            }
+          }
+          &__td {
+            background-color: #fff;
+            border: solid 1px #efefef;
+            display: table-cell;
+            vertical-align: middle;
+            width: 180px;
+            .link-to-exhibitor {
+              @include linkStyle;
+              height: 50px;
+              line-height: 50px;
+            }
+            span {
+              margin-left: 5px;
+            }
+            &__face-icon {
+              line-height: 30px;
+              .good {
+                float: left;
+                height: 20px;
+                width: 20px;
+                margin-bottom: 10px;
+              }
+              .normal {
+                float: left;
+                height: 20px;
+                width: 20px;
+              }
+              .bad {
+                float: left;
+                height: 20px;
+                width: 20px;
+              }
+              &__face-count {
+                float: left;
+                font-size: 10px;
+                margin-right: 10px;
+                line-height: 20px;
+              }
+            }
+            i {
+              margin-left: 5px;
+            }
+            &__category-right {
+              .link-to-category {
+                @include linkStyle;
+              }
+            }
+          }
+          &__th-brand-following {
+            background-color: #f7f6f5;
+            border: solid 1px #efefef;
+            display: table-cell;
+            vertical-align: middle;
+            width: 120px;
+            height: 38px;
+            span {
+              margin-left: 5px;
+            }
+          }
+          &__td-brand-following {
+            background-color: #fff;
+            border: solid 1px #efefef;
+            display: table-cell;
+            vertical-align: middle;
+            width: 180px;
+            .link-to-region {
+              @include linkStyle;
+            }
+            span {
+              margin-left: 5px;
+            }
+          }
+        }
+      }
+    }
+    //↓ここから料金表示のところ
+    .section__item-price {
+      display: flex;
+      justify-content: center;
+      margin-top: 15px;
+      &__yen {
+        font-size: 50px;
+        font-weight: bold;
+      }
+      &__tax {
+        font-size: 10px;
+        margin: 45px 3px 0 20px;
+      }
+      &__shipping-fee {
+        font-size: 16px;
+        margin-top: 39px;
+      }
+    }
+    .btn {
+      background-color: #ea352d;
+      color: #fff;
+      height: 56px;
+      width: 600px;
+      line-height: 56px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      font-weight: 600;
+      font-size: 23px;
+      .link-to-buy {
+        color: #fff;
+        text-decoration: none ;
+      }
+    }
+    &__item-description {
+      white-space: pre;
+      line-height: 25px;
+      width: 600px;
+      margin-top: 5px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    &__item-bottom {
+      &__content {
+        &__good {
+          float: left;
+        .btn.item-good-button {
+            background-color: #f5f5f5;
+            color: #696969;
+            height: 30px;
+            width: 100px;
+            line-height: 30px;
+            text-align: center;
+            font-size: 13px;
+            border-radius: 20px;
+            margin-left: 30px;
+            font-weight: lighter;
+          }
+        }
+        &__report {
+          float: left;
+          .btn.item-report-button {
+            background-color: #f5f5f5;
+            color: #696969;
+            height: 30px;
+            width: 170px;
+            line-height: 30px;
+            text-align: center;
+            font-size: 13px;
+            border-radius: 20px;
+            margin-left: 30px;
+            font-weight: lighter;
+          }
+        }
+        &__approach {
+          float: right;
+          .safe-and-secure-initiatives {
+            @include linkStyle;
+            font-size: 13px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 20px;
+            margin-right: 30px;
+            font-weight: lighter;
+          }
+        }
+      }
+    }
+  }
+  //↓コメント欄のとこ
+  .section-bottom {
+    position: relative;
+    height: 285px;
+    width: 700px;
+    background-color: #fff;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    padding-top: 10px;
+    &__area {
+      font-size: 13px;
+      background-color: #fff6de;
+      height: 50px;
+      margin: 10px 25px 10px 25px;
+      padding: 5px 5px;
+      &__area-description {
+        margin: 5px 5px;
+        line-height: 50px;
+        font-weight: lighter;
+      }
+    }
+    &__area-comment-field {
+      height: 115px;
+      width: 650px;
+      margin-left: auto;
+      margin-right: auto;
+      textarea {
+        resize: vertical;
+        height: 110px;
+        width: 648px;
+      }
+    }
+    .btn {
+      background-color: #aaa;
+      height: 50px;
+      margin: 10px 25px 10px 25px;
+      line-height: 50px;
+      text-align: center;
+      .link-to-comment {
+        color: #fff;
+        text-decoration: none;
+        font-weight: lighter;
+        font-size: 14px;
+      }
+    }
+  }
+  .section-nav {
+    height: 50px;
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 12px;
+    &__item {
+      .link-to-prev {
+        @include linkStyle;
+        float: left;
+        line-height: 50px;
+      }
+      .link-to-next {
+        @include linkStyle;
+        float: right;
+        line-height: 50px;
+      }
+    }
+  }
+  //↓ソーシャルメディアアイコンたち
+  .section-social {
+    position: relative;
+    height: 120px;
+    width: 700px;
+    background-color: #fff;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    padding-top: 10px;
+    &__icons {
+      &__box {
+        text-align: center;
+        line-height: 130px;
+        &__facebook {
+          display: inline-block;
+        }
+        &__twitter {
+          display: inline-block;
+        }
+        &__line {
+          display: inline-block;
+        }
+        &__pinterest {
+          display: inline-block;
+        }
+        .link-to-sns {
+          text-decoration: none;
+          .icons {
+            height: 45px;
+            width: 45px;
+          }
+        }
+      }
+    }
+  }
+  //↓プロフィール必読下さいからのその他商品一覧
+  .section-profile {
+    height: 50px;
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #00bfff;
+    &__text {
+      .link-to-profile {
+        @include linkStyle;
+        float: left;
+        line-height: 50px;
+      }
+    }
+  }
+  .section-other {
+    position: relative;
+    width: 700px;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    padding-top: 5px;
+    &__items {
+      width: 220px;
+      height: 320px;
+      background-color: #fff;
+      color: black;
+      font-size: 13px;
+      .link-to-other-items {
+        color: black;
+        text-decoration: none;
+        .other-items {
+          height: 220px;
+          width: 220px;
+        }
+      }
+      &__box-description {
+        margin-left: 8px;
+        height: 100px;
+        widows: 220px;
+        &__price {
+          margin-top: 30px;
+          font-size: 12px;
+          font-weight: bold;
+        }
+        &__tax {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+}
