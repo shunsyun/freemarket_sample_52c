@@ -8,4 +8,13 @@ class ItemsController < ApplicationController
   def mypage
   end
 
+  def show
+  end
+
+  def sell
+  end
+
+  def buy
+  end
+
 end

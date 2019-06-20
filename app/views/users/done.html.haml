@@ -1,0 +1,34 @@
+.single-container
+  .single-header
+    %h1.single-header__logo
+      = link_to do
+        =image_tag "https://www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?128691313", alt: "mercari", class: "mercari-logo" 
+    =image_tag "https://i.gyazo.com/e5a941b8d933495052575017ab4ec24f.png", class: "progress__bar__status__done"
+  %main.single-main
+    %section.single-main__container
+      %h2.single-main__container__header 会員登録完了
+      %form.registration-form
+        %input{name: "__csrf_value", type: "hidden", value: ""}/
+        .registration-form__content
+          %p.done.message ありがとうございます。
+          %p.done.message 会員登録が完了しました。
+          %button.btn-default.btn-red{type: "submit"} メルカリをはじめる 
+          %image.image__kari{src: "https://i.gyazo.com/3115ad076f4ae0ac5d647ccec944218e.png"}
+
+
+  %footer.single-footer
+    %nav
+      %ul.single-footer__menu
+        %li.single-footer__menu__content
+          = link_to "", class: 'single-footer__menu__content__portion' do
+            プライバシーポリシー
+        %li.single-footer__menu__content
+          = link_to "", class: 'single-footer__menu__content__portion' do
+            メルカリ利用規約
+        %li.single-footer__menu__content
+          = link_to "", class: 'single-footer__menu__content__portion' do
+            特定商取引に関する表記
+      = link_to class: 'single-footer-logo' do
+        =image_tag "//www-mercari-jp.akamaized.net/assets/img/common/common/logo-gray.svg?2855175014", alt: "mercari", class: "footer-logo"
+      %p.footer-century
+        %small © 2019 Mercari

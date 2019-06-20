@@ -1,11 +1,12 @@
-.wrapper
-  = render partial:"header"
-  .bread-crumbs
+.wrapper-delete
+  = render partial:"shared/header"
+  =render partial:"shared/bread_crumbs"
   .container
     .content-side-bar
+      = render partial:"shared/side_bar"
     .content
       .content__chapter
         %form.content__chapter__form
           .content__chapter__form__btn
-            =link_to "#" do
-              %button.content__chapter__form__btn__red{type:"submit"} ログアウト
+            = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'content__chapter__form__btn__red' 
+            -# %button.content__chapter__form__btn__red{type:"submit"} ログアウト

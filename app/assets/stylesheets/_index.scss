@@ -158,6 +158,8 @@
     position: relative;
     &__image{
       background:image-url("banner.jpg");
+      background-position: center;
+      background-size: cover;
       height:390px;
       width:100%;
     }
@@ -389,20 +391,20 @@
   }
 }
 .sell-btn{
-   bottom: 32px;
-   right: 32px;
-   width: 160px;
-   height: 160px;
-   font-size: 22px;
-   position: fixed;
-   border-radius: 50%;
-   background: #ea352d;
-   color: #fff;
-   text-align: center;
-   &__text {
-    margin: 14px 0 0;
-   }
-   &__icon{
-    font:80px FontAwesome;
-   }
+  bottom: 32px;
+  right: 32px;
+  width: 160px;
+  height: 160px;
+  font-size: 22px;
+  position: fixed;
+  border-radius: 50%;
+  background: #ea352d;
+  color: #fff;
+  text-align: center;
+  &__text {
+  margin: 14px 0 0;
+  }
+  &__icon{
+  font:80px FontAwesome;
+  }
 }
