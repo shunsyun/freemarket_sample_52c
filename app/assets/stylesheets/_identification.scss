@@ -1,14 +1,19 @@
+@import "./mixin/mixins";
+@import "./config/colors";
+
 .wrapper-id {
   box-sizing: border-box;
   background-color: #f5f5f5;
   height: 1800px;
   width: 100vw;
-
+  .id-container{
+    margin:0 auto;
+    width: 1020px;
+  }
   .lside{
     float: left;
     width: 280px;
     margin-top: 60px;
-    margin-left: 60px;
     margin-bottom: 30px;
     .mypage--nav{
       &__ul{
@@ -64,16 +69,19 @@
       }
     }
   }
-
+  .box-id{
+    float:right;
+    width:700px;
+  }
   .header-id {
     @include marginCenter;
     width: 700px;
+    min-width: 700px;
     text-align: center;
     float: left;
     height: 45px;
     background-color: $mainWhite;
     margin-top: 60px;
-    margin-left: 60px;
     padding-top: 15px;
     line-height: 20px;
     border-bottom: solid 1px #f5f5f5;
@@ -90,7 +98,7 @@
     background-color: $mainWhite;
     color: $fontColor;
     float: left;
-    margin-left: 60px;
+    min-width: 700px;
     &__main {
       padding-top: 60px;
       width: 80%;
@@ -237,6 +245,7 @@
         padding-left: 15px;
         line-height: 48px;
         margin-left: 70px;
+        text-align:center;
         &__box {
           color: $mainWhite;
           font-size: 14px;

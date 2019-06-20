@@ -193,8 +193,8 @@
             %li.footer__content__box__mass__list プレリリース
             %li.footer__content__box__mass__list 公式ブログ
             %li.footer__content__box__mass__list メルカリロゴ利用ガイドライン
-          %i.footer__content__box__mass__icon.fab.fa--twitter
-          %i.footer__content__box__mass__icon.fab.fa--facebook--square
+          %i.footer__content__box__mass__icon.fab.fa-twitter
+          %i.footer__content__box__mass__icon.fab.fa-facebook-square
       .footer__content__box
         %h2.footer__content__box__heading ヘルプ＆ガイド
         %ul.footer__content__box__mass
@@ -233,8 +233,8 @@
             %li.footer__content__box__mass__list United State
       .footer__content__bottom
         .footer__content__bottom__icon
-        %span.footer__content__bottom__copy--right
+        %span.footer__content__bottom__copy-right
           %small © 2019 Mercari
-  .sell--btn
-    .sell--btn__text 出品
-    %i.sell--btn__icon.fas.fa--camera
+  =link_to sell_path, class:'sell-btn', method: :get do
+    .sell-btn__text 出品
+    %i.sell-btn__icon.fas.fa-camera
