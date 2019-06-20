@@ -13,6 +13,8 @@ Rails.application.routes.draw do
 
   root "items#index"
   get "items/delete",to: "items#delete"
+  get "items/buy",to: "items#buy"
+  get "users/identification", to: "users#identification", as: "identification"
   resources :wallets, only: [:new]
   resources :items, only:[:index, :show]
   resources :users, only:[:index, :show, :new] do

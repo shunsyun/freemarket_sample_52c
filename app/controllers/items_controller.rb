@@ -14,4 +14,7 @@ class ItemsController < ApplicationController
   def sell
   end
 
+  def buy
+  end
+
 end

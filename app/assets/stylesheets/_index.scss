@@ -158,6 +158,8 @@
     position: relative;
     &__image{
       background:image-url("banner.jpg");
+      background-position: center;
+      background-size: cover;
       height:390px;
       width:100%;
     }
