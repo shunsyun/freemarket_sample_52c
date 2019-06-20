@@ -50,7 +50,8 @@
                     %span.header__box__nav__right__content__list__link__figure__text マイページ
           -else
             %li.header__box__nav__right__content__list
-              =link_to new_user_registration_path, method: :get do
+              -# =link_to new_user_registration_path, method: :get do
+              =link_to "users/", method: :get do
                 .header__box__nav__right__content__list__link
                   .header__box__nav__right__content__list__link--text-red 新規会員登録
             %li.header__box__nav__right__content__list
