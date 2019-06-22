@@ -4,5 +4,5 @@ class Item < ApplicationRecord
   belongs_to :category
   belongs_to :brand
   belongs_to :user
-  bolongs_to :prefecture
+  belongs_to :prefecture
 end

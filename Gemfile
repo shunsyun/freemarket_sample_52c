@@ -81,3 +81,11 @@ gem "font-awesome-rails"
 
 gem 'devise'
 gem 'active_hash'
+gem 'ransack'
+gem 'gretel'
+gem 'payjp'
+gem 'ancestry'
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'omniauth-google-oauth2'
+gem 'mini_magick'
