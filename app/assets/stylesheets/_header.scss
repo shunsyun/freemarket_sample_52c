@@ -116,13 +116,15 @@
             padding: 0 7px;
             cursor: pointer;
             padding: 0 14px;
+            vertical-align: middle;
             &__link{
               position: relative;
-              display: block;
+              display: inline-block;
               height: 32px;
               line-height: 32px;
               font-size: 0;
               color: #333;
+              vertical-align: middle;
               &__icon{
                 color: #ccc;
                 font-size: 12px;
