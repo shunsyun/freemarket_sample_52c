@@ -8,4 +8,6 @@ class User < ApplicationRecord
   validates :first_name, presence: true
   validates :family_kana_name, presence: true,format: { with: /\A[\p{katakana}\p{blank}ー－]+\z/, message: 'はカタカナで入力して下さい。'}
   validates :first_kana_name, presence: true,format: { with: /\A[\p{katakana}\p{blank}ー－]+\z/, message: 'はカタカナで入力して下さい。'}
+
+  has_many :items
 end
