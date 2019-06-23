@@ -5,4 +5,6 @@ class Item < ApplicationRecord
   belongs_to :brand
   belongs_to :user
   belongs_to :prefecture
+  
+  scope :recent, -> {order('id DESC')}
 end
