@@ -3,54 +3,14 @@
   .main
     .carousel
       .carousel__image
-      -# = image_tag "https://www-mercari-jp.akamaized.net/assets/img/common/jp/top/main_content_pc.png?582218381", size: "390x1000", alt: "カルーセル（仮）", class: "carousel__image"
     .pickup
       %h2.pickup__heading ピックアップカテゴリー
       .pickup__item
         %h3.pickup__item__category
           =link_to "#" do
             .pickup__item__category__title  レディース新着アイテム
-        .pickup__item__box
-          .pickup__item__box__content
-            =link_to "#" do
-              .pickup__item__box__content__link
-                .pickup__item__box__content__link__figure
-                  = image_tag "item-t_shirt.jpg", size: "213x220", alt: "商品（仮）", class: "pickup__item__box__content__link__figure__image"
-                .pickup__item__box__content__link__body
-                  %h3.pickup__item__box__content__link__body__name Tシャツ
-                  .pickup__item__box__content__link__body__num
-                    .pickup__item__box__content__link__body__num__price￥5,000
-                  %p.pickup__item__box__content__link__body__tax （税込）
-          .pickup__item__box__content
-            =link_to "#" do
-              .pickup__item__box__content__link
-                .pickup__item__box__content__link__figure
-                  = image_tag "item-t_shirt.jpg", size: "213x220", alt: "商品（仮）", class: "pickup__item__box__content__link__figure__image"
-                .pickup__item__box__content__link__body
-                  %h3.pickup__item__box__content__link__body__name Tシャツ
-                  .pickup__item__box__content__link__body__num
-                    .pickup__item__box__content__link__body__num__price￥5,000
-                  %p.pickup__item__box__content__link__body__tax （税込）
-          .pickup__item__box__content
-            =link_to "#" do
-              .pickup__item__box__content__link
-                .pickup__item__box__content__link__figure
-                  = image_tag "item-t_shirt.jpg", size: "213x220", alt: "商品（仮）", class: "pickup__item__box__content__link__figure__image"
-                .pickup__item__box__content__link__body
-                  %h3.pickup__item__box__content__link__body__name Tシャツ
-                  .pickup__item__box__content__link__body__num
-                    .pickup__item__box__content__link__body__num__price￥5,000
-                  %p.pickup__item__box__content__link__body__tax （税込）
-          .pickup__item__box__content
-            =link_to "#" do
-              .pickup__item__box__content__link
-                .pickup__item__box__content__link__figure
-                  = image_tag "item-t_shirt.jpg", size: "213x220", alt: "商品（仮）", class: "pickup__item__box__content__link__figure__image"
-                .pickup__item__box__content__link__body
-                  %h3.pickup__item__box__content__link__body__name Tシャツ
-                  .pickup__item__box__content__link__body__num
-                    .pickup__item__box__content__link__body__num__price￥5,000
-                  %p.pickup__item__box__content__link__body__tax（税込）
+        - @ladies.each do |item|
+          = render partial:"item_index",locals: {item: item}
         .pickup__item__all
           =link_to "#" do
             %p.pickup__item__all__link 全ての商品を見る
@@ -58,31 +18,67 @@
         %h3.pickup__item__category
           =link_to "#" do
             .pickup__item__category__title  メンズ新着アイテム
-        .pickup__item__box
-          .pickup__item__box__content
-            =link_to "#" do
-              .pickup__item__box__content__link
-                .pickup__item__box__content__link__figure
-                  = image_tag "item-t_shirt.jpg", size: "213x220", alt: "商品（仮）", class: "pickup__item__box__content__link__figure__image"
-                .pickup__item__box__content__link__body
-                  %h3.pickup__item__box__content__link__body__name Tシャツ
-                  .pickup__item__box__content__link__body__num
-                    .pickup__item__box__content__link__body__num__price￥5,000
-                  %p.pickup__item__box__content__link__body__tax（税込）
-          .pickup__item__box__content
-            =link_to "#" do
-              .pickup__item__box__content__link
-                .pickup__item__box__content__link__figure
-                  = image_tag "item-t_shirt.jpg", size: "213x220", alt: "商品（仮）", class: "pickup__item__box__content__link__figure__image"
-                .pickup__item__box__content__link__body
-                  %h3.pickup__item__box__content__link__body__name Tシャツ
-                  .pickup__item__box__content__link__body__num
-                    .pickup__item__box__content__link__body__num__price￥5,000
-                  %p.pickup__item__box__content__link__body__tax (税込)
+        - @mens.each do |item|
+          = render partial:"item_index",locals: {item: item}
         .pickup__item__all
           =link_to "#" do
             %p.pickup__item__all__link 全ての商品を見る
-
+      .pickup__item
+        %h3.pickup__item__category
+          =link_to "#" do
+            .pickup__item__category__title  ベビー・キッズ新着アイテム
+        - @babies.each do |item|
+          = render partial:"item_index",locals: {item: item}
+        .pickup__item__all
+          =link_to "#" do
+            %p.pickup__item__all__link 全ての商品を見る
+      .pickup__item
+        %h3.pickup__item__category
+          =link_to "#" do
+            .pickup__item__category__title  コスメ・香水・美容 新着アイテム
+        - @cosmes.each do |item|
+          = render partial:"item_index",locals: {item: item}
+        .pickup__item__all
+          =link_to "#" do
+            %p.pickup__item__all__link 全ての商品を見る
+    .pickup
+      %h2.pickup__heading ピックアップブランド
+      .pickup__item
+        %h3.pickup__item__category
+          =link_to "#" do
+            .pickup__item__category__title  シャネル新着アイテム
+        - @chanels.each do |item|
+          = render partial:"item_index",locals: {item: item}
+        .pickup__item__all
+          =link_to "#" do
+            %p.pickup__item__all__link 全ての商品を見る
+      .pickup__item
+        %h3.pickup__item__category
+          =link_to "#" do
+            .pickup__item__category__title  ルイヴィトン 新着アイテム
+        - @louis.each do |item|
+          = render partial:"item_index",locals: {item: item}
+        .pickup__item__all
+          =link_to "#" do
+            %p.pickup__item__all__link 全ての商品を見る
+      .pickup__item
+        %h3.pickup__item__category
+          =link_to "#" do
+            .pickup__item__category__title  シュプリーム 新着アイテム
+        - @supremes.each do |item|
+          = render partial:"item_index",locals: {item: item}
+        .pickup__item__all
+          =link_to "#" do
+            %p.pickup__item__all__link 全ての商品を見る
+      .pickup__item
+        %h3.pickup__item__category
+          =link_to "#" do
+            .pickup__item__category__title  ナイキ 新着アイテム
+        - @nikes.each do |item|
+          = render partial:"item_index",locals: {item: item}
+        .pickup__item__all
+          =link_to "#" do
+            %p.pickup__item__all__link 全ての商品を見る
   .aside
     .aside__banner
       .aside__banner__left
