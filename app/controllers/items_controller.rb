@@ -3,14 +3,14 @@ class ItemsController < ApplicationController
 
   def index
     @item = Item.new
-    @ladies = Item.recent.limit(4).where(category_id:1)
-    @mens = Item.recent.limit(4).where(category_id:2)
-    @babies = Item.recent.limit(4).where(category_id:3)
-    @cosmes =Item.recent.limit(4).where(category_id:4)
-    @chanels =Item.recent.limit(4).where(category_id:5)
-    @louis =Item.recent.limit(4).where(category_id:6)
-    @supremes =Item.recent.limit(4).where(category_id:7)
-    @nikes =Item.recent.limit(4).where(category_id:8)
+    @ladies = Item.recent.where(category_id:1)
+    @mens = Item.recent.where(category_id:2)
+    @babies = Item.recent.where(category_id:3)
+    @cosmes =Item.recent.where(category_id:4)
+    @chanels =Item.recent.where(category_id:5)
+    @louis =Item.recent.where(category_id:6)
+    @supremes =Item.recent.where(category_id:7)
+    @nikes =Item.recent.where(category_id:8)
   end
   # def delete
   # end

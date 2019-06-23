@@ -6,5 +6,5 @@ class Item < ApplicationRecord
   belongs_to :user
   belongs_to :prefecture
   
-  scope :recent, -> {order('id DESC')}
+  scope :recent, -> {order('id DESC').limit(4)}
 end
