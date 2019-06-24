@@ -7,10 +7,10 @@ class ItemsController < ApplicationController
     @mens = Item.recent.where(category_id:2)
     @babies = Item.recent.where(category_id:3)
     @cosmes =Item.recent.where(category_id:4)
-    @chanels =Item.recent.where(category_id:5)
-    @louis =Item.recent.where(category_id:6)
-    @supremes =Item.recent.where(category_id:7)
-    @nikes =Item.recent.where(category_id:8)
+    @chanels =Item.recent.where(brand_id:1)
+    @louis =Item.recent.where(brand_id:2)
+    @supremes =Item.recent.where(brand_id:3)
+    @nikes =Item.recent.where(brand_id:4)
   end
   # def delete
   # end
