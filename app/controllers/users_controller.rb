@@ -24,7 +24,11 @@ end
 def identification
 end
 
+def mypage
+end
 
+def delete
+end
 
 
 end

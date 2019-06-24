@@ -170,6 +170,7 @@
     &__heading{
       font-size: 28px;
       text-align:center;
+      font-weight:bold;
     }
     &__item{
       width: 940px;
@@ -178,6 +179,7 @@
         font-size: 22px;
         margin: 26px 11px;
         text-align: center;
+        font-weight:bold;
         &__title{
           color: #0099e8;
           text-decoration: none;
@@ -186,6 +188,7 @@
       &__box{
         width: auto;
         margin: 0 auto;
+        display:inline-block;
         &__content{
           margin: 0 0 0 15px;
           width: 213px;
@@ -194,6 +197,10 @@
             &__figure{
               width: 213px;
               height: 220px;
+              &__image{
+                width: 213px;
+                height: 220px;
+              }
             }
             &__body{
               padding: 16px;
@@ -203,10 +210,12 @@
                 overflow: hidden;
                 position: relative;
                 font-weight: 400;
+                font-size: 16px;
                 height: 3em;
                 line-height: 1.5;
                 word-break: break-word;
                 white-space: normal;
+                text-align:left;
               }
               &__num{
                 display: flex;
@@ -221,6 +230,7 @@
               }
               &__tax{
                 font-size: 10px;
+                text-align:left;
               }
             }
           }
