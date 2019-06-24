@@ -7,16 +7,17 @@ Rails.application.routes.draw do
     get "sign_up", to: "users/registrations#new"
     get "sign_in", to: "users/sessions#new"
     get "sign_out", to: "users/sessions#destroy" 
-   
+  
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   root "items#index"
-  get "items/delete",to: "items#delete"
+  get "users/delete",to: "users#delete"
   get "items/buy",to: "items#buy"
   get "items/buy_done",to: "items#buy_done"
   post "items/pay",to: "items#pay"
   get "users/identification", to: "users#identification", as: "identification"
+  get "mypage", to: "users#mypage", as: "mypage"
   resources :wallets, only: [:new]
   resources :items, only:[:index, :show]
   resources :users, only:[:index, :show, :new] do
@@ -27,8 +28,7 @@ Rails.application.routes.draw do
     get "credit"
   end
 end
-  get "mypage", to: "items#mypage", as: "mypage"
-  get "mypage/profile", to: "items#mypage_profile", as: "mypage/profile"
+  get "mypage/profile", to:"items#mypage_profile", as: "mypage/profile"
   get "sell", to: "items#sell", as: "sell"
   
 end
