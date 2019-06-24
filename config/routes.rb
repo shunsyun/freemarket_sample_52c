@@ -14,6 +14,8 @@ Rails.application.routes.draw do
   root "items#index"
   get "items/delete",to: "items#delete"
   get "items/buy",to: "items#buy"
+  get "items/buy_done",to: "items#buy_done"
+  post "items/pay",to: "items#pay"
   get "users/identification", to: "users#identification", as: "identification"
   resources :wallets, only: [:new]
   resources :items, only:[:index, :show]
@@ -30,3 +32,4 @@ end
   get "sell", to: "items#sell", as: "sell"
   
 end
+
