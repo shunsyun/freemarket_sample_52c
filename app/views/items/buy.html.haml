@@ -16,6 +16,7 @@
         .section-buy__main__content-item__price-fee-box
           .section-buy__main__content-item__price-fee-box__price
             ¥ 1,880
+
           .section-buy__main__content-item__price-fee-box__shipping-fee
             送料込み
       .section-buy__main__point
@@ -30,7 +31,7 @@
           .section-buy__main__price__display__fee
             ¥ 1,880
       = form_tag(action: :pay, method: :post ) do
-        %script.payjp-button{:src => "https://checkout.pay.jp", :type => "text/javascript" ,"data-text" => "購入する" ,"data-key" => 'pk_test_1c01d71c165d7c78d93a3c5b' }
+        %script.payjp-button{src: "https://checkout.pay.jp", type: "text/javascript" ,"data-text": "購入する" ,"data-key": ENV['PAYJP_PRIVATE_KEY']}
 
   .section-shipping
     .section-shipping__adress
