@@ -36,6 +36,9 @@
         .sell--upload--box {
           width: 620px;
           padding: 40px;
+          .hidden{
+            display:none;
+          }
           &__head {
             font-size: 16px;
             font-weight: bold;
