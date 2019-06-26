@@ -1,9 +1,15 @@
 .bread
   %nav.bread__crumbs
     %ul.bread__crumbs__ul
-      %li.bread__crumbs__ul__li
-        =link_to "#", class: 'bread__crumbs__ul__li__a' do
-          %span メルカリ
-        %i.fa.fa-chevron-right
-      %li.bread__crumbs__ul__li
-        %span マイページ
+      - case params.values_at :controller, :action
+      - when ['users', 'delete']
+        - breadcrumb :user_sign_out
+      - when ['users', 'mypage']
+        - breadcrumb :user_mypage
+      = breadcrumbs separator: " &nbsp;&nbsp;&#12297;&nbsp; "
+    -#   %li.bread__crumbs__ul__li
+    -#     =link_to "#", class: 'bread__crumbs__ul__li__a' do
+    -#       %span メルカリ
+    -#     %i.fa.fa-chevron-right
+    -#   %li.bread__crumbs__ul__li
+    -#     %span マイページ
