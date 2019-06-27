@@ -137,11 +137,6 @@
                       %span.form--require 必須
                     .select--wrap
                       = f.select :prefecture,Item.prefectures.keys,{},{class:"select--wrap__default select--wrap-cat3__default-category3"}
-                      -# %select.select--wrap__default
-                        -# %option{value: ""} ---
-                        -# = Prefecture.all.each do |pre|
-                        -#   %option{value: "#{pre.id}"} 
-                        -#     = pre.name
                       %i.fas.fa-angle-down
                   .sell--content3__form1__group3
                     %label.sell--content3__form1__group3__label
