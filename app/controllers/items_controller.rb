@@ -25,6 +25,7 @@ class ItemsController < ApplicationController
       render :new
     end
   end
+  
   def delete
   end
 
