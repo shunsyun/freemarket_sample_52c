@@ -35,7 +35,10 @@
         border-top: 1px solid #eee;
         .sell--upload--box {
           width: 620px;
-          padding: 40px;
+          padding: 40px;  
+          .hidden{
+            display:none;
+          }
           &__head {
             font-size: 16px;
             font-weight: bold;
@@ -73,13 +76,15 @@
             .sell--upload--drop--box {
               margin-left: 0;
               height: 162px;
-              padding: 40px;
               position: relative;
               background: #f5f5f5;
               border: 1px dashed #ccc;
               text-align: center;
+              #canvas{
+                float:left;
+              }
               .visible--pc{
-                padding-top: 24px; 
+                padding-top: 64px; 
               }
             }
           }

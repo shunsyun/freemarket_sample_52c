@@ -93,3 +93,4 @@ gem "omniauth-rails_csrf_protection"
 gem 'jquery-rails'
 
 gem 'dotenv-rails'
+gem 'carrierwave'
