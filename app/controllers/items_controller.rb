@@ -1,3 +1,4 @@
+
 class ItemsController < ApplicationController
   # before_action :set_category
 
@@ -11,11 +12,8 @@ class ItemsController < ApplicationController
     @supremes =Item.recent.where(brand_id:3)
     @nikes =Item.recent.where(brand_id:4)
   end
-  # def delete
-  # end
 
-  # def mypage
-  # end
+
   def new
     @item = Item.new
     @item.images.build
@@ -30,6 +28,11 @@ class ItemsController < ApplicationController
       render :new
     end
   end
+  def delete
+  end
+
+  def mypage
+  end
 
   def show
   end
@@ -38,6 +41,15 @@ class ItemsController < ApplicationController
   end
 
   def buy
+  end
+
+  def buy_done
+  end
+
+  def pay
+    Payjp.api_key = ENV['PAYJP_SECRET_KEY']
+    Payjp::Charge.create(currency: 'jpy', amount: 9000, card: params['payjp-token'])
+    redirect_to items_buy_done_path, notice: "支払いが完了しました"
   end
 
   private
@@ -56,3 +68,4 @@ class ItemsController < ApplicationController
   # end
 
 end
+
