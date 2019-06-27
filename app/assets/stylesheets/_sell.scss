@@ -152,7 +152,6 @@
           }
         }
         .sell--content2 {
-          // min-height: 300px;
           padding: 40px;
           border-top: 1px solid #eee;
           display:flex;
@@ -165,7 +164,6 @@
             font-weight: bold;
           }
           &__form1{
-            // float: right;
             width: 400px;
             margin: 0;
             color: #333;
@@ -188,10 +186,8 @@
               &__label-brand {
                 display:none;
                 font-weight: 600;
-                // display: inline-block;
                 color: #333;
                 .form--require1{
-                  // display:none;
                   background: gray;
                   margin: 0 0 0 8px;
                   padding: 2px 4px;
@@ -204,10 +200,8 @@
               &__label-size {
                 display:none;
                 font-weight: 600;
-                // display: inline-block;
                 color: #333;
                 .form--require-size{
-                  // display:none;
                   background:#ea352d;
                   margin: 0 0 0 8px;
                   padding: 2px 4px;
@@ -237,8 +231,8 @@
                   top: 50%;
                   z-index: 2;
                   color: #888;
-                  // -webkit-transform: translate(0, -50%);
-                  // transform: translate(0, -50%);
+                  -webkit-transform: translate(0, -50%);
+                  transform: translate(0, -50%);
                 }
               }
               .select--wrap-cat2{
