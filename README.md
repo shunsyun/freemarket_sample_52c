@@ -70,7 +70,7 @@ Things you may want to cover:
 |like_id           |references |foreign_key:true|
 |comment_id        |references |foreign_key:true|
 |bland_id          |references |foreign_key:true|
-|seller_id           |references |foreign_key:true|
+|seller_id         |references |foreign_key:true|
 |image_id          |references |foreign_key:true|
 |region_id         |references |foreign_key:true|
 |customer_id       |references |foreign_key:true|

@@ -19,6 +19,7 @@ class ItemsController < ApplicationController
   def new
     @item = Item.new
     @item.images.build
+    # @item.build_brand
   end
   
   def create
@@ -42,7 +43,7 @@ class ItemsController < ApplicationController
   private
 
   def item_params
-    params.require(:item).permit(:name,:price,:description,:status,:image_id,images_attributes:[:text])
+    params.require(:item).permit(:name,:price,:description,:status,:delivery_days,:delivery_charge,:prefecture,images_attributes:[:text],brand_attributes:[:name])
     # .merge(user_id:current_user.id)
   end
 
