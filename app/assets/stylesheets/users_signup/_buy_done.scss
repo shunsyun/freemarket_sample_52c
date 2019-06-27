@@ -1,0 +1,24 @@
+.item__name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.price-fee-box {
+  border-top: 1px solid #f5f5f5;
+  &__price {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+  }
+  &__shipping-fee {
+    font-size: 20px;
+    font-weight: normal;
+    padding-top: 10px;
+
+
+    
+  }
+ 
+}

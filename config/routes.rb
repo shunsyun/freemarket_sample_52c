@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users,controllers: {
     registrations: 'users/registrations',
-    sessions: 'users/sessions'   
+    sessions: 'users/sessions',
+    omniauth_callbacks: 'users/omniauth_callbacks'
   } 
   devise_scope :user do
     get "sign_up", to: "users/registrations#new"
@@ -14,6 +15,8 @@ Rails.application.routes.draw do
   root "items#index"
   get "users/delete",to: "users#delete"
   get "items/buy",to: "items#buy"
+  get "items/buy_done",to: "items#buy_done"
+  post "items/pay",to: "items#pay"
   get "users/identification", to: "users#identification", as: "identification"
   get "mypage", to: "users#mypage", as: "mypage"
   resources :wallets, only: [:new]
@@ -31,3 +34,4 @@ end
   post "item/new", to: "items#create"
   
 end
+
