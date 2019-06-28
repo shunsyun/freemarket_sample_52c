@@ -20,7 +20,7 @@ Rails.application.routes.draw do
   get "users/identification", to: "users#identification", as: "identification"
   get "mypage", to: "users#mypage", as: "mypage"
   resources :wallets, only: [:new]
-  resources :items, only:[:index, :show]
+  resources :items, only:[:index, :show,:create,:new]
   resources :users, only:[:index, :show, :new] do
   collection do
     get "number"
@@ -30,7 +30,5 @@ Rails.application.routes.draw do
   end
 end
   get "mypage/profile", to:"items#mypage_profile", as: "mypage/profile"
-  get "sell", to: "items#sell", as: "sell"
-  
 end
 

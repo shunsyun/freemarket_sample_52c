@@ -1,10 +1,8 @@
 
 class ItemsController < ApplicationController
-  # before_action :set_category
 
   def index
-    @item = Item.new
-    @ladies = Item.recent.where(category_id:1)
+    @ladies = Item.recent
     @mens = Item.recent.where(category_id:2)
     @babies = Item.recent.where(category_id:3)
     @cosmes =Item.recent.where(category_id:4)
@@ -14,6 +12,20 @@ class ItemsController < ApplicationController
     @nikes =Item.recent.where(brand_id:4)
   end
 
+  def new
+    @item = Item.new
+    @item.images.build
+  end
+  
+  def create
+    @item = Item.new(item_params)
+    if @item.save 
+      redirect_to root_path
+    else
+      render :new
+    end
+  end
+  
   def delete
   end
 
@@ -39,12 +51,9 @@ class ItemsController < ApplicationController
   end
 
   private
-  def create_params
-    params.require(:item).permit(:name,:price,:description,:status).merge(image_id: params[:image_id])
-  end
 
-  def set_category
-    @category = Category.find(params[:category_id])
+  def item_params
+    params.require(:item).permit(:name,:price,:description,:status,:delivery_days,:delivery_charge,:prefecture,images_attributes:[:text],brand_attributes:[:name])
   end
 
 end

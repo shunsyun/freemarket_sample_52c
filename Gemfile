@@ -92,4 +92,8 @@ gem 'mini_magick'
 gem "omniauth-rails_csrf_protection"
 gem 'jquery-rails'
 
+
 gem 'dotenv-rails'
+
+gem 'carrierwave'
+gem 'fog-aws'
