@@ -2,14 +2,14 @@
 class ItemsController < ApplicationController
 
   def index
-    @ladies = Item.recent
-    @mens = Item.recent.where(category_id:2)
-    @babies = Item.recent.where(category_id:3)
-    @cosmes =Item.recent.where(category_id:4)
-    @chanels =Item.recent.where(brand_id:1)
-    @louis =Item.recent.where(brand_id:2)
-    @supremes =Item.recent.where(brand_id:3)
-    @nikes =Item.recent.where(brand_id:4)
+    @ladies = Item.recent.where(category_l:1)
+    @mens = Item.recent.where(category_l:2)
+    @babies = Item.recent.where(category_l:3)
+    @cosmes = Item.recent.where(category_l:4)
+    @chanels = Item.recent.where(brand:"シャネル")
+    @louis = Item.recent.where(brand:"ルイヴィトン")
+    @supremes = Item.recent.where(brand:"シュプリーム")
+    @nikes = Item.recent.where(brand:"ナイキ")
   end
 
   def new
@@ -53,7 +53,7 @@ class ItemsController < ApplicationController
   private
 
   def item_params
-    params.require(:item).permit(:name,:price,:description,:status,:delivery_days,:delivery_charge,:prefecture,images_attributes:[:text],brand_attributes:[:name])
+    params.require(:item).permit(:name,:price,:description,:status,:delivery_days,:delivery_charge,:prefecture,:category_l,:size,:brand,images_attributes:[:text])
   end
 
 end

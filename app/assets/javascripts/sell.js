@@ -1,7 +1,7 @@
 $(function(){
   $(".select--wrap-cat1__default-category1").on('change',function(){
   var selectVal = $('.select--wrap-cat1__default-category1').val();
-  if(selectVal > 0){
+  if(selectVal != "0"){
     $('.select--wrap-cat2').css("display","block");
   } else {
     $('.select--wrap-cat2').css("display","none");
