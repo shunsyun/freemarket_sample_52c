@@ -11,6 +11,8 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema.define(version: 2019_06_28_065357) do
+ActiveRecord::Schema.define(version: 2019_06_26_081009) do
+ActiveRecord::Schema.define(version: 2019_06_27_055726) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -71,6 +73,7 @@ ActiveRecord::Schema.define(version: 2019_06_28_065357) do
     t.datetime "updated_at", null: false
     t.bigint "image_id"
     t.bigint "category_id"
+    t.integer "seller_id"
     t.integer "prefecture"
     t.integer "category_l"
     t.string "brand"
