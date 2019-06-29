@@ -12,7 +12,7 @@ class Item < ApplicationRecord
   validates :delivery_charge, presence: true
   validates :category_l, presence: true
   validates :prefecture, presence: true
-  validates :price,numericality: { only_integer: true,greater_than: 300, less_than: 9999999}
+  validates :price,numericality: { only_integer: true,greater_than: 299, less_than: 10000000}
   validates :image, presence: true
   # has_many :images
   # belongs_to :user, foreign_key:"seller_id"
