@@ -6,9 +6,9 @@
         - breadcrumb :user_sign_out
       - when ['users', 'mypage']
         - breadcrumb :user_mypage
-      - when ['items','show']
-        - breadcrumb :item_show
       = breadcrumbs separator: " &nbsp;&nbsp;&#12297;&nbsp; "
+     -# - when ['items','show']
+      -#   - breadcrumb :item_show
     -#   %li.bread__crumbs__ul__li
     -#     =link_to "#", class: 'bread__crumbs__ul__li__a' do
     -#       %span メルカリ
