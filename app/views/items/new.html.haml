@@ -10,6 +10,7 @@
           .sell--container--inner
             %h2.l--single--head 商品の情報を入力
             = form_with model:@item, class:"sell--form",local: true do |f|
+              =f.hidden_field :trade_status, value:1
               .sell--upload--box
                 %h3.sell--upload--box__head
                   出品画像
@@ -19,10 +20,9 @@
                   .sell--dropbox--container__items
                     .sell--dropbox--container__items__upload
                       %ul.sell--dropbox--container__items__upload__ul
-                  = f.fields_for :images do |image|
                     %label
-                      = image.file_field :text,{class: 'hidden sell--upload--drop--box'}
                       .sell--upload--drop--box
+                        = f.file_field :image,{class: 'hidden sell--upload--drop--box'}
                         .sell--upload--drop--box2
                           %pre.visible--pc
                             ドラッグアンドドロップ
