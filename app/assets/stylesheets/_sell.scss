@@ -1,3 +1,6 @@
+*{
+  box-sizing:border-box;
+}
 .single--container{
   background-color: #f5f5f5;
   .single--header {
@@ -36,6 +39,9 @@
         .sell--upload--box {
           width: 620px;
           padding: 40px;
+          .hidden{
+            display:none;
+          }
           &__head {
             font-size: 16px;
             font-weight: bold;
@@ -73,13 +79,15 @@
             .sell--upload--drop--box {
               margin-left: 0;
               height: 162px;
-              padding: 40px;
               position: relative;
               background: #f5f5f5;
               border: 1px dashed #ccc;
               text-align: center;
+              #canvas{
+                float:left;
+              }
               .visible--pc{
-                padding-top: 24px; 
+                padding-top: 64px; 
               }
             }
           }
@@ -144,9 +152,10 @@
           }
         }
         .sell--content2 {
-          height: 261px;
           padding: 40px;
           border-top: 1px solid #eee;
+          display:flex;
+          justify-content: space-between;
           &__head {
             float: left;
             color: #888;
@@ -155,7 +164,6 @@
             font-weight: bold;
           }
           &__form1{
-            float: right;
             width: 400px;
             margin: 0;
             color: #333;
@@ -175,14 +183,43 @@
                   vertical-align: top;
                 }
               }
-              .select--wrap {
+              &__label-brand {
+                display:none;
+                font-weight: 600;
+                color: #333;
+                .form--require1{
+                  background: gray;
+                  margin: 0 0 0 8px;
+                  padding: 2px 4px;
+                  border-radius: 2px;
+                  color: #fff;
+                  font-size: 12px;
+                  vertical-align: top;
+                }
+              }
+              &__label-size {
+                display:none;
+                font-weight: 600;
+                color: #333;
+                .form--require-size{
+                  background:#ea352d;
+                  margin: 0 0 0 8px;
+                  padding: 2px 4px;
+                  border-radius: 2px;
+                  color: #fff;
+                  font-size: 12px;
+                  vertical-align: top;
+                }
+              }
+              .select--wrap-cat1{
                 margin: 8px 0 0;
-                position: relative;
                 background: #fff;
-                &__default {
+                position: relative;
+                &__default-category1{
                   width: 100%;
                   height: 48px;
                   border: 1px solid #ccc;
+                  position: relative;
                   background: 0;
                   -webkit-appearance: none;
                   padding: 0 16px;
@@ -198,6 +235,56 @@
                   transform: translate(0, -50%);
                 }
               }
+              .select--wrap-cat2{
+                display:none;
+                margin: 8px 0 0;
+                background: #fff;
+                position: relative;
+                &__default-category2{
+                  width: 100%;
+                  height: 48px;
+                  border: 1px solid #ccc;
+                  position: relative;
+                  background: 0;
+                  -webkit-appearance: none;
+                  padding: 0 16px;
+                }
+                .fa-angle-down {
+                  font: normal 25px FontAwesome;
+                  position: absolute;
+                  right: 12px;
+                  top: 50%;
+                  z-index: 2;
+                  color: #888;
+                  -webkit-transform: translate(0, -50%);
+                  transform: translate(0, -50%);
+                }
+              }
+              .select--wrap-cat3{
+                display:none;
+                margin: 8px 0 0;
+                background: #fff;
+                position: relative;
+                &__default-category3{
+                  width: 100%;
+                  height: 48px;
+                  border: 1px solid #ccc;
+                  position: relative;
+                  background: 0;
+                  -webkit-appearance: none;
+                  padding: 0 16px;
+                }
+                .fa-angle-down {
+                  font: normal 25px FontAwesome;
+                  position: absolute;
+                  right: 12px;
+                  top: 50%;
+                  z-index: 2;
+                  color: #888;
+                  -webkit-transform: translate(0, -50%);
+                  transform: translate(0, -50%);
+                }
+              } 
             }
           }
           &__form2{

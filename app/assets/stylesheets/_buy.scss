@@ -89,14 +89,14 @@
           }
         }
       }
-      &__purchase {
+      #payjp_checkout_box input[type=button] {
         @include marginCenter;
         @include bold;
         @include boxWidth;
         background-color: #e2041b;
         margin-top: 10px;
         font-size: 15px;
-        line-height: 48px;
+        line-height: 50%;
         .link-to-buy-box {
           color: #fff;
           text-decoration: none;

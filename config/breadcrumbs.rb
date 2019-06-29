@@ -12,6 +12,12 @@ crumb :user_sign_out do
   parent :user_mypage
 end
 
+# crumb :item_show do
+#   link "#{@item.name}", item_path
+#   parent :root
+# end
+
+
 # crumb :projects do
 #   link "Projects", projects_path
 # end
