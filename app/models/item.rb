@@ -5,8 +5,8 @@ class Item < ApplicationRecord
                     "鳥取県":31,"島根県":32,"岡山県":33,"広島県":34,"山口県":35,"徳島県":36,"香川県":37,"愛媛県":38,"高知県":39,"福岡県":40,"佐賀県":41,"長崎県":42,"熊本県":43,"大分県":44,"宮崎県":45,"鹿児島県":46,"沖縄県":47,"未定":48}
   enum category_l: {"----":0,"レディース":1,"メンズ":2,"ベビー・キッズ":3,"コスメ・香水・美容":4,"インテリア・住まい・小物":5,"本・音楽・ゲーム":6,"おもちゃ・ホビー・グッズ":7,"家電・スマホ・カメラ":8,"スポーツ・レジャー":9,"ハンドメイド":10,"チケット":11,"自動車・オートバイ":12,"その他":13}
   
-  validates :name, presence: true
-  validates :description, presence: true
+  validates :name, presence: true, length: { maximum: 40 }
+  validates :description, presence: true, length: { maximum: 1000 }
   validates :status, presence: true
   validates :delivery_days, presence: true
   validates :delivery_charge, presence: true
