@@ -12,6 +12,25 @@ crumb :user_sign_out do
   parent :user_mypage
 end
 
+crumb :identification do
+  link "本人情報の確認"
+  parent :user_mypage
+end
+
+crumb :item_show do |item|
+  link item.name, item_path(item.id)
+  parent :root
+end
+
+crumb :wallet do
+  link "支払い方法" 
+  parent :user_mypage
+end
+
+crumb :profile do
+  link "プロフィール" 
+  parent :user_mypage
+end
 # crumb :projects do
 #   link "Projects", projects_path
 # end

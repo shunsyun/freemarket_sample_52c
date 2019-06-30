@@ -16,6 +16,9 @@ Rails.application.routes.draw do
 
   root "items#index"
   get "users/delete",to: "users#delete"
+  get "items/:id/buy",to: "items#buy",as:"item_buy"
+  get "items/buy_done",to: "items#buy_done"
+  post "items/pay",to: "items#pay"
   get "users/identification", to: "users#identification", as: "identification"
   get "mypage", to: "users#mypage", as: "mypage"
   resources :wallets, only:[:new, :show] do
@@ -26,7 +29,7 @@ Rails.application.routes.draw do
       post 'delete', to: 'wallets#delete'
     end
   end
-  resources :items, only:[:index, :show]
+  resources :items, only:[:index, :show,:create,:new]
   resources :users, only:[:index, :show, :new] do
   collection do
     get "number"
@@ -35,8 +38,7 @@ Rails.application.routes.draw do
     get "credit"
   end
 end
-
-resources :purchase, only: [:index, :show] do
+  resources :purchase, only: [:index, :show] do
   collection do
     get 'show', to: 'purchase#show'
     get 'index', to: 'purchase#index'
@@ -45,8 +47,7 @@ resources :purchase, only: [:index, :show] do
   end
 end
 
-  get "mypage/profile", to:"items#mypage_profile", as: "mypage/profile"
-  get "sell", to: "items#sell", as: "sell"
-  
+  get "mypage/profile", to:"users#mypage_profile", as: "mypage/profile"
+
 end
 

@@ -1,9 +1,9 @@
 .pickup__item__box
   .pickup__item__box__content
-    =link_to item_path(item.id),method: :get do
+    =link_to items_path,method: :get do
       .pickup__item__box__content__link
         .pickup__item__box__content__link__figure
-          = image_tag "#{item.image}",class: "pickup__item__box__content__link__figure__image"
+          = image_tag "#{item.images[0].text}",class: "pickup__item__box__content__link__figure__image"
         .pickup__item__box__content__link__body
           %h3.pickup__item__box__content__link__body__name 
             = item.name

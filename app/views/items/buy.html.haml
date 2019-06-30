@@ -10,12 +10,12 @@
     .section-buy__main
       .section-buy__main__content-item
         .section-buy__main__content-item__photo
-          = image_tag "item_purchace.jpg", size: "128x128", alt: "商品写真", class: "item-photo"
+          = image_tag @item.image.url, alt: "商品写真", class: "item-photo"
         .section-buy__main__content-item__name
-          SUIT SELECT ブラックシャツ パンクコーデ v系
+          =converting_to_mark(@item.price)
         .section-buy__main__content-item__price-fee-box
           .section-buy__main__content-item__price-fee-box__price
-            ¥ 1,880
+            =converting_to_mark(@item.price)
 
           .section-buy__main__content-item__price-fee-box__shipping-fee
             送料込み
@@ -29,7 +29,7 @@
             支払い金額
         .section-buy__main__price__display
           .section-buy__main__price__display__fee
-            ¥ 1,880
+            =converting_to_mark(@item.price)
       = form_tag(action: :pay, method: :post ) do
         %script.payjp-button{src: "https://checkout.pay.jp", type: "text/javascript" ,"data-text": "購入する" ,"data-key": ENV['PAYJP_PRIVATE_KEY']}
 
@@ -48,7 +48,6 @@
         =link_to "#", class:"link-to-change" do
           変更する
           %i.fa.fa-chevron-right
-
   .section-bottom
     .section-bottom__purchase
       .section-bottom__purchase__way
@@ -64,7 +63,6 @@
         =link_to "#", class:"link-to-change" do
           変更する
           %i.fa.fa-chevron-right
-
   .footer-buy
     .footer-buy__menu
       .footer-buy__menu__list
