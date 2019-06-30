@@ -4,9 +4,6 @@ $(function(){
     if(!confirm(alert)){
         /* キャンセルの時の処理 */
         return false;
-    }else{
-        /*　OKの時の処理 */
-        location.href = 'root';
     }
   });
 });
