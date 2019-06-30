@@ -18,6 +18,7 @@ class Item < ApplicationRecord
   # belongs_to :user, foreign_key:"seller_id"
   belongs_to :seller, class_name:"User"
   # belongs_to :wallet
+  has_one :buyer, class_name:"User"
   # accepts_nested_attributes_for :images
   mount_uploader :image, ImageUploader
   scope :recent, -> {order('id DESC').limit(4)}
