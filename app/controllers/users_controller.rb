@@ -27,6 +27,9 @@ end
 def mypage
 end
 
+def mypage_profile
+end
+
 def delete
 end
 
