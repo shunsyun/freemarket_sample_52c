@@ -1,6 +1,6 @@
 .pickup__item__box
   .pickup__item__box__content
-    =link_to "items/show",method: :get do
+    =link_to item_path(item.id),method: :get do
       .pickup__item__box__content__link
         .pickup__item__box__content__link__figure
           = image_tag "#{item.image}",class: "pickup__item__box__content__link__figure__image"
