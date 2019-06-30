@@ -14,7 +14,7 @@ Rails.application.routes.draw do
 
   root "items#index"
   get "users/delete",to: "users#delete"
-  get "items/buy",to: "items#buy"
+  get "items/:id/buy",to: "items#buy",as:"item_buy"
   get "items/buy_done",to: "items#buy_done"
   post "items/pay",to: "items#pay"
   get "users/identification", to: "users#identification", as: "identification"
@@ -29,6 +29,6 @@ Rails.application.routes.draw do
     get "credit"
   end
 end
-  get "mypage/profile", to:"items#mypage_profile", as: "mypage/profile"
+  get "mypage/profile", to:"users#mypage_profile", as: "mypage/profile"
 end
 

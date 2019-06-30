@@ -17,9 +17,11 @@
                 = image_tag "item_purchace.jpg", size: "128x128", alt: "商品写真", class: "item-photo"
               .item__name
                 SUIT SELECT ブラックシャツ パンクコーデ v系
+                -# = @item.name
       .price-fee-box
         .price-fee-box__price
-          ¥ 1,880
+          ¥ 1800
+          -# = converting_to_mark(item.price)
           .price-fee-box__shipping-fee
             送料込み
 

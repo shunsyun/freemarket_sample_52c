@@ -1,5 +1,6 @@
 .wrapper
   = render partial:"shared/header"
+  = render partial:"shared/bread_crumbs"
   .default-conteiner
     .l-container__clearfix
       .l-container__clearfix__content
@@ -16,7 +17,7 @@
               %input{class:"setting__profile-content__input", name: "after_save_callback", type: "hidden", value: "https://www.m#rc#ri.com/jp/mypage/profile/"}
               %button{class:"setting__profile-content__btn-red", type: "submit"} 変更する
       .l-container__clearfix__l-side
-        = render 'shared/side_bar_p'
+        = render partial:"shared/side_bar"
 .asd
   = render 'items/aside'
 .foot

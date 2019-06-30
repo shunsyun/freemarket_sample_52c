@@ -35,6 +35,10 @@
       &__content-item {
         &__photo {
           margin-top: 3px;
+          .item-photo{
+            height:128px;
+            width:128px;
+          }
         }
         &__name {
           @include bold;

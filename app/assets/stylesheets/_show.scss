@@ -9,12 +9,12 @@
   background-color: #f5f5f5;
   width: 100%;
   .section {
-    height: 970px;
     width: 700px;
     background-color: #fff;
     margin-left: auto;
     margin-right: auto;
     margin-top: 24px;
+    padding-bottom: 40px;
     &__item-name {
       font-size: 22px;
       font-weight: bold;
@@ -183,17 +183,18 @@
       }
     }
     &__item-description {
-      white-space: pre;
+      white-space: pre-wrap;
       line-height: 25px;
       width: 600px;
       margin-top: 5px;
       margin-left: auto;
       margin-right: auto;
+      word-wrap:break-word;
     }
     &__item-bottom {
       &__content {
         &__good {
-          float: left;
+          display:inline-block;
         .btn.item-good-button {
             background-color: #f5f5f5;
             color: #696969;
@@ -208,7 +209,7 @@
           }
         }
         &__report {
-          float: left;
+          display:inline-block;
           .btn.item-report-button {
             background-color: #f5f5f5;
             color: #696969;

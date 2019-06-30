@@ -34,16 +34,18 @@ class ItemsController < ApplicationController
   end
 
   def show
-    # @item = Item.find(params[:id])
+    @item = Item.find(params[:id])
   end
 
   def sell
   end
 
   def buy
+    @item = Item.find(params[:id])
   end
 
   def buy_done
+    # @item = Item.find(params[:id])
   end
 
   def pay
