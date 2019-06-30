@@ -35,7 +35,6 @@ class PurchaseController < ApplicationController
     currency: 'jpy', #日本円
   )
   redirect_to action: 'done' #完了画面に移動
-  @item.update()
   end
 
 end
