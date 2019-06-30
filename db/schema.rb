@@ -10,7 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 2019_06_29_051904) do
+ActiveRecord::Schema.define(version: 2019_06_30_091945) do
+
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -75,7 +78,9 @@ ActiveRecord::Schema.define(version: 2019_06_29_051904) do
     t.integer "prefecture"
     t.integer "category_l"
     t.string "brand"
+    t.integer "seller_id"
     t.text "image"
+    t.integer "buyer_id"
     t.index ["brand_id"], name: "index_items_on_brand_id"
     t.index ["category_id"], name: "index_items_on_category_id"
     t.index ["image_id"], name: "index_items_on_image_id"
