@@ -26,18 +26,6 @@ class ItemsController < ApplicationController
   def sell
   end
 
-  def buy
-  end
-
-  def buy_done
-  end
-
-  def pay
-    Payjp.api_key = ENV['PAYJP_SECRET_KEY']
-    Payjp::Charge.create(currency: 'jpy', amount: 9000, card: params['payjp-token'])
-    redirect_to items_buy_done_path, notice: "支払いが完了しました"
-  end
-
   private
   def create_params
     params.require(:item).permit(:name,:price,:description,:status).merge(image_id: params[:image_id])
