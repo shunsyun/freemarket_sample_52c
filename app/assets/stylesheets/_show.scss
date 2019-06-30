@@ -182,6 +182,41 @@
         text-decoration: none ;
       }
     }
+    .btn-edit {
+      background-color: #ea352d;
+      color: #fff;
+      height: 56px;
+      width: 600px;
+      line-height: 56px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      font-weight: 600;
+      font-size: 23px;
+      .link-to-edit {
+        color: #fff;
+        text-decoration: none ;
+      }
+    }
+    .or{
+      text-align:center;
+    }
+    .btn-delete {
+      background-color: #696969;
+      color: #fff;
+      height: 56px;
+      width: 600px;
+      line-height: 56px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      font-weight: 600;
+      font-size: 23px;
+      .link-to-delete {
+        color: #fff;
+        text-decoration: none ;
+      }
+    }
     &__item-description {
       white-space: pre-wrap;
       line-height: 25px;
