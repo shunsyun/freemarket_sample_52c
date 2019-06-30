@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'purchase/index'
+  get 'purchase/done'
   devise_for :users,controllers: {
     registrations: 'users/registrations',
     sessions: 'users/sessions',
@@ -19,7 +21,14 @@ Rails.application.routes.draw do
   post "items/pay",to: "items#pay"
   get "users/identification", to: "users#identification", as: "identification"
   get "mypage", to: "users#mypage", as: "mypage"
-  resources :wallets, only: [:new]
+  resources :wallets, only:[:new, :show] do
+    collection do
+      get "paying"
+      post 'show', to: 'wallets#show'
+      post 'pay', to: 'wallets#pay'
+      post 'delete', to: 'wallets#delete'
+    end
+  end
   resources :items, only:[:index, :show,:create,:new]
   resources :users, only:[:index, :show, :new] do
   collection do
@@ -29,6 +38,16 @@ Rails.application.routes.draw do
     get "credit"
   end
 end
+  resources :purchase, only: [:index, :show] do
+  collection do
+    get 'show', to: 'purchase#show'
+    get 'index', to: 'purchase#index'
+    post 'pay', to: 'purchase#pay'
+    get 'done', to: 'purchase#done'
+  end
+end
+
   get "mypage/profile", to:"users#mypage_profile", as: "mypage/profile"
+
 end
 

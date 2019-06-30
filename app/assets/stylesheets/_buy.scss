@@ -93,18 +93,32 @@
           }
         }
       }
-      #payjp_checkout_box input[type=button] {
+      .error-text {
+        color: #ea352d;
+        line-height: 1.5;
+        font-size: 14px;
+      }
+      .red_btn {
         @include marginCenter;
         @include bold;
         @include boxWidth;
         background-color: #e2041b;
         margin-top: 10px;
-        font-size: 15px;
+        font-size: 15px; 
         line-height: 50%;
-        .link-to-buy-box {
-          color: #fff;
-          text-decoration: none;
-        }
+        color: #fff;
+        text-decoration: none;
+      }
+      .gray_btn {
+        @include marginCenter;
+        @include bold;
+        @include boxWidth;
+        background-color: #888;
+        margin: 10 10px;
+        font-size: 15px; 
+        line-height: 50%;
+        color: #fff;
+        text-decoration: none;
       }
     } 
   }

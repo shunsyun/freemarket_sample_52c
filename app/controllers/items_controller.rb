@@ -44,17 +44,6 @@ class ItemsController < ApplicationController
     @item = Item.find(params[:id])
   end
 
-  def buy_done
-    # @item = Item.find(params[:id])
-  end
-
-  def pay
-    @item = Item.find(params[:id])
-    Payjp.api_key = ENV['PAYJP_SECRET_KEY']
-    Payjp::Charge.create(currency: 'jpy', amount: item.price, card: params['payjp-token'])
-    redirect_to items_buy_done_path, notice: "支払いが完了しました"
-  end
-
   private
 
   def item_params
