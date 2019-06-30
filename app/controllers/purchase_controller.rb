@@ -23,6 +23,7 @@ class PurchaseController < ApplicationController
   end
 
   def show
+    @item = Item.find(params[:id])
   end
 
   def pay

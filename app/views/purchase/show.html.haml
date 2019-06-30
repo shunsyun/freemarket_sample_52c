@@ -10,12 +10,13 @@
     .section-buy__main
       .section-buy__main__content-item
         .section-buy__main__content-item__photo
-          = image_tag "item_purchace.jpg", size: "128x128", alt: "商品写真", class: "item-photo"
+          = image_tag @item.image.url, size: "128x128", alt: "商品写真", class: "item-photo"
         .section-buy__main__content-item__name
-          SUIT SELECT ブラックシャツ パンクコーデ v系
+          = @item.name
+          -# SUIT SELECT ブラックシャツ パンクコーデ v系
         .section-buy__main__content-item__price-fee-box
           .section-buy__main__content-item__price-fee-box__price
-            ¥ 1,880
+            =converting_to_mark(@item.price)
 
           .section-buy__main__content-item__price-fee-box__shipping-fee
             送料込み
@@ -29,7 +30,7 @@
             支払い金額
         .section-buy__main__price__display
           .section-buy__main__price__display__fee
-            ¥ 1,880
+            = converting_to_mark(@item.price)
       %p.error-text 配送先と支払い方法の入力を完了してください。    
       %button.gray_btn 購入する
 
