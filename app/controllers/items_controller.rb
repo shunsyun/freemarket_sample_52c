@@ -2,7 +2,12 @@
 class ItemsController < ApplicationController
   # before_action :authenticate_user!, only:[:index,:show]
   before_action :move_to_sign_in,except: [:index,:show]
+  before_action :set_search
+
   def index
+    @q = Item.ransack(params[:q])
+    @items = @q.result(distinct: true)
+
     @ladies = Item.recent.where(category_l:1)
     @mens = Item.recent.where(category_l:2)
     @babies = Item.recent.where(category_l:3)
@@ -51,6 +56,11 @@ class ItemsController < ApplicationController
     @item = Item.find(params[:id])
   end
 
+  def search
+    @q = Item.ransack(search_params)
+    @items = @q.result(distinct: true)
+  end
+
   private
 
   def item_params
@@ -61,5 +71,14 @@ class ItemsController < ApplicationController
     redirect_to sign_in_path unless user_signed_in?
   end
   # images_attributes:[:text]
+
+  def search_params
+    params.require(:q).permit(:name_cont)
+  end
+
+  def set_search
+    @q = Item.search(params[:q])
+  end
+
 end
 
