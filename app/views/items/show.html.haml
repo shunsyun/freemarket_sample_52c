@@ -14,28 +14,22 @@
               .section__main__box__owl-carousel__stage__outer__active
                 .section__main__box__owl-carousel__stage__outer__active__item-inner{ id: 'main' }
                   = image_tag @item.image.url, alt: "画像1", class: "owl-lazy"
+                  = image_tag @item.image.url, alt: "画像1", class: "owl-lazy"
+                  = image_tag @item.image.url, alt: "画像1", class: "owl-lazy"
+                  = image_tag @item.image.url, alt: "画像1", class: "owl-lazy"
+                  = image_tag @item.image.url, alt: "画像1", class: "owl-lazy"
                 - if @item.sales_status == "公開停止"
                   .section__main__box__owl-carousel__stage__outer__active__gray
                   .section__main__box__owl-carousel__stage__outer__active__sold
                     公開停止
           .section__main__box__owl-carousel__item-photo
             .section__main__box__owl-carousel__item-photo__thumbnails
-              %span
-              .section__main__box__owl-carousel__item-photo__thumbnails__inner
-                = image_tag @item.image.url, alt: "画像2", class: "owl-lazy-sub"
-            .section__main__box__owl-carousel__item-photo__thumbnails
-              .section__main__box__owl-carousel__item-photo__thumbnails__inner
-                = image_tag @item.image.url, alt: "画像3", class: "owl-lazy-sub"
-            .section__main__box__owl-carousel__item-photo__thumbnails
-              %span
-              .section__main__box__owl-carousel__item-photo__thumbnails__inner
-                = image_tag @item.image.url, alt: "画像2", class: "owl-lazy-sub"
-            .section__main__box__owl-carousel__item-photo__thumbnails
-              .section__main__box__owl-carousel__item-photo__thumbnails__inner
-                = image_tag @item.image.url, alt: "画像3", class: "owl-lazy-sub"
-            .section__main__box__owl-carousel__item-photo__thumbnails
-              .section__main__box__owl-carousel__item-photo__thumbnails__inner
-                = image_tag @item.image.url, alt: "画像3", class: "owl-lazy-sub"
+              .section__main__box__owl-carousel__item-photo__thumbnails__inner{id: 'owls'}
+                = image_tag @item.image.url, alt: "画像1", class: "owl-lazy-sub"
+                = image_tag @item.image.url, alt: "画像1", class: "owl-lazy-sub"
+                = image_tag @item.image.url, alt: "画像1", class: "owl-lazy-sub"
+                = image_tag @item.image.url, alt: "画像1", class: "owl-lazy-sub"
+                = image_tag @item.image.url, alt: "画像1", class: "owl-lazy-sub"
       -#   .section__main__box__owl-carousel
       -#     .section__main__box__owl-carousel__stage
       -#       .section__main__box__owl-carousel__stage__outer
