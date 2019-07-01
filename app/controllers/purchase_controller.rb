@@ -3,6 +3,7 @@ class PurchaseController < ApplicationController
   require 'payjp'
 
   def index
+    @item = Item.find(params[:id])
     card = Wallet.where(user_id: current_user.id).first
       #テーブルからpayjpの顧客IDを検索
     if card.blank?
@@ -17,16 +18,22 @@ class PurchaseController < ApplicationController
     end
   end
 
+  def done
+    @item = Item.find(params[:id])
+  end
+
   def show
+    @item = Item.find(params[:id])
   end
 
   def pay
+    @item = Item.find(params[:id])
     card = Wallet.where(user_id: current_user.id).first
     Payjp.api_key = ENV["PAYJP_SECRET_KEY"]
     Payjp::Charge.create(
-    :amount => 724, #支払金額を入力（itemテーブル等に紐づけても良い）
-    :customer => card.customer_id, #顧客ID
-    :currency => 'jpy', #日本円
+    amount: @item.price, 
+    customer: card.customer_id, #顧客ID
+    currency: 'jpy', #日本円
   )
   redirect_to action: 'done' #完了画面に移動
   end
