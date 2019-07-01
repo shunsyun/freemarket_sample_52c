@@ -35,7 +35,8 @@ class PurchaseController < ApplicationController
     customer: card.customer_id, #顧客ID
     currency: 'jpy', #日本円
   )
-    @item.buyer_id = 1
+    @item.buyer_id = current_user.id
+    @item.sales_status = "売却済み"
     @item.save
   redirect_to action: 'done' #完了画面に移動
   end

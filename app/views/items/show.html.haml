@@ -14,7 +14,7 @@
               .section__main__box__owl-carousel__stage__outer__active
                 .section__main__box__owl-carousel__stage__outer__active__item-inner{ id: 'main' }
                   = image_tag @item.image.url, alt: "画像1", class: "owl-lazy"
-                -if @item.buyer_id == 1
+                -if @item.buyer_id != nil
                   .section__main__box__owl-carousel__stage__outer__active__red
                   .section__main__box__owl-carousel__stage__outer__active__sold
                     SOLD  
