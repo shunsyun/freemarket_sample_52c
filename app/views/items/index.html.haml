@@ -2,7 +2,9 @@
   = render partial:"shared/header"
   .main
     .carousel
-      .carousel__image
+      .carousel__image{id:'carousel'}
+        = image_tag "banner.jpg"
+        = image_tag "for_carousel.png"
     .pickup
       %h2.pickup__heading ピックアップカテゴリー
       .pickup__item

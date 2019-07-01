@@ -138,12 +138,24 @@
       %span.section__item-price__shipping-fee
         = @item.delivery_charge
         -# 送料は購入者負担
-
-    .btn
-      .btn__buy-button
-      =link_to item_buy_path(@item.id), class:"link-to-buy" do
-        .btn__buy-button__text
-          購入画面に進む
+    - unless @item.seller.id == current_user.id
+      .btn
+        .btn__buy-button
+        =link_to item_buy_purchase_index_path(@item.id), class:"link-to-buy" do
+          .btn__buy-button__text
+            購入画面に進む
+    -else
+      .btn-edit
+        .btn__buy-button
+        =link_to item_path, class:"link-to-edit" do
+          .btn__buy-button__text
+            商品を編集する
+      .or or
+      .btn-delete
+        .btn__buy-button
+        =link_to item_path, class:"link-to-delete",method: :delete do
+          .btn__buy-button__text
+            商品を削除する
     .section__item-description
       .section__item-description__text
         .section__item-description__text__field
