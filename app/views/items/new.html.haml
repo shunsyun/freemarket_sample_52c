@@ -10,7 +10,7 @@
           .sell--container--inner
             %h2.l--single--head 商品の情報を入力
             = form_with model:@item, class:"sell--form",local: true do |f|
-              =f.hidden_field :trade_status, value:1
+              =f.hidden_field :sales_status,{value:"出品中"}
               .sell--upload--box
                 %h3.sell--upload--box__head
                   出品画像
