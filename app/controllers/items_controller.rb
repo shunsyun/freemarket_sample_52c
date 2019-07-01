@@ -2,7 +2,12 @@
 class ItemsController < ApplicationController
   # before_action :authenticate_user!, only:[:index,:show]
   before_action :move_to_sign_in,except: [:index,:show]
+  before_action :set_search
+
   def index
+    @q = Item.ransack(params[:q])
+    @items = @q.result(distinct: true)
+
     @ladies = Item.recent.where(category_l:1)
     @mens = Item.recent.where(category_l:2)
     @babies = Item.recent.where(category_l:3)
@@ -28,12 +33,18 @@ class ItemsController < ApplicationController
   end
   
   def destroy
-    def destroy
-      item = Item.find(params[:id])
-      if item.seller_id == current_user.id
-        item.destroy
-        redirect_to root_path
-      end
+    item = Item.find(params[:id])
+    if item.seller_id == current_user.id
+      item.destroy
+      redirect_to root_path
+    end
+  end
+
+  def update
+    item = Item.find(params[:id])
+    if item.seller_id == current_user.id
+      item.update(item_params)
+      redirect_to root_path
     end
   end
 
@@ -53,15 +64,29 @@ class ItemsController < ApplicationController
     @item = Item.find(params[:id])
   end
 
+  def search
+    @q = Item.ransack(search_params)
+    @items = @q.result(distinct: true)
+  end
+
   private
 
   def item_params
-    params.require(:item).permit(:name,:price,:description,:image,:status,:delivery_days,:delivery_charge,:prefecture,:category_l,:size,:brand,:trade_status).merge(seller_id:current_user.id)
+    params.require(:item).permit(:name,:price,:description,:image,:status,:delivery_days,:delivery_charge,:prefecture,:category_l,:size,:brand,:sales_status).merge(seller_id:current_user.id)
   end
 
   def move_to_sign_in
     redirect_to sign_in_path unless user_signed_in?
   end
   # images_attributes:[:text]
+
+  def search_params
+    params.require(:q).permit(:name_cont)
+  end
+
+  def set_search
+    @q = Item.search(params[:q])
+  end
+
 end
 

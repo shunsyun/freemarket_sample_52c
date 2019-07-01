@@ -10,9 +10,18 @@
       -#   = f.text_field :content, class: 'header__box__top__search__box', placeholder: '何かお探しですか？',type:"search",name:"keyword"
       -#   = fa_icon 'fas fa-search', class: 'header__box__top__search__box__icon.'
       -#   = f.submit 'Send', class: 'form__submit'
-      %form.header__box__top__search
-        %input.header__box__top__search__box{type:"search",name:"keyword",placeholder:"何かお探しですか？"}
-        %i.header__box__top__search__box__icon.fas.fa-search
+      = search_form_for @q, url:search_path do |f|
+        .header__box__top__logo__search
+          = f.search_field :name_cont, class: 'header__box__top__logo__search__box', id: 'search-query', placeholder: '何かお探しですか？'
+          = button_tag type: 'submit', class: 'hidden' do
+            %i.fa.fa-search
+
+          -# = f.submit 'search', class: 'hidden' do
+          -#   %i.fa.fa-search
+
+      -# %form.header__box__top__search
+      -#   %input.header__box__top__search__box{type:"search",name:"keyword",placeholder:"何かお探しですか？"}
+      -#   %i.header__box__top__search__box__icon.fas.fa-search
     .header__box__nav
       .header__box__nav__left
         %ul.header__box__nav__left__content
