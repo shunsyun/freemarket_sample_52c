@@ -1,0 +1,32 @@
+.wrapper-search
+  = render partial:"shared/header"
+  = render partial:"shared/bread_crumbs"
+
+  .container
+    .container__left
+      .container__left__sort-area
+        .container__left__sort-area__box
+          並び替え
+      
+      .container__left__search-area
+        .container__left__search-area__box
+
+    .container__right
+      .container__right__search-result
+        .container__right__search-result__item-name
+          = @q.name_cont
+        .container__right__search-result__text
+          の検索結果
+      .container__right__displayed-results
+        .container__right__displayed-results__display
+          = "1-#{@items.length}件表示"
+      .container__right__search-item
+        .container__right__search-item__results
+          - @items.each do |item|
+            .container__right__search-item__results__box
+              .container__right__search-item__results__box__image-box
+                = image_tag item.image.url, alt: "画像1", class: "owl-lazy"
+                .container__right__search-item__results__box__image-box__name-box
+                  = item.name
+                .container__right__search-item__results__box__image-box__price
+                  = converting_to_mark(item.price)

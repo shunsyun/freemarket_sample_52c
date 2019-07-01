@@ -5,16 +5,17 @@ Rails.application.routes.draw do
     registrations: 'users/registrations',
     sessions: 'users/sessions',
     omniauth_callbacks: 'users/omniauth_callbacks'
-  } 
+  }
   devise_scope :user do
     get "sign_up", to: "users/registrations#new"
     get "sign_in", to: "users/sessions#new"
     get "sign_out", to: "users/sessions#destroy" 
-  
+
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   root "items#index"
+  get "search", to: "items#search"
   get "users/delete",to: "users#delete"
   get "items/:id/buy",to: "items#buy",as:"item_buy"
   get "items/buy_done",to: "items#buy_done"
@@ -29,8 +30,8 @@ Rails.application.routes.draw do
       post 'delete', to: 'wallets#delete'
     end
   end
-
-  resources :items, only:[:index, :show, :create, :new, :edit, :update]
+  
+  resources :items, only:[:index, :show,:create,:new,:destroy,:update]
 
   resources :users, only:[:index, :show, :new] do
   collection do
