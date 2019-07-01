@@ -31,12 +31,36 @@
       &__box__owl-carousel {
         letter-spacing: normal;
         &__stage__outer__active {
+          z-index: 0;
+          position: relative;
           &__item-inner {
             color: #fff;
             .owl-lazy {
               height: 300px;
               width: 300px;
             }
+          }
+          &__red{
+            border-top: 50px solid red;
+            border-right: 50px solid transparent;
+            border-bottom: 50px solid transparent;
+            border-left: 50px solid red;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+          }
+          &__sold{
+            top: 18px;
+            font-size: 26px;
+            position: absolute;
+            left: 0;
+            z-index: 2;
+            color: white;
+            transform: rotate(-45deg);
+            letter-spacing: 2px;
+            font-weight: 600;
+            font-size: 20px;
           }
         }
         &__item-photo {
@@ -202,6 +226,22 @@
       text-align:center;
     }
     .btn-delete {
+      background-color: #696969;
+      color: #fff;
+      height: 56px;
+      width: 600px;
+      line-height: 56px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      font-weight: 600;
+      font-size: 23px;
+      .link-to-delete {
+        color: #fff;
+        text-decoration: none ;
+      }
+    }
+    .btn-sold {
       background-color: #696969;
       color: #fff;
       height: 56px;

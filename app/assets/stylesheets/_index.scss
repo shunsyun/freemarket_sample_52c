@@ -194,6 +194,8 @@
           width: 213px;
           display:inline-block;
           &__link{
+            z-index: 0;
+            position: relative;
             &__figure{
               width: 213px;
               height: 220px;
@@ -201,6 +203,28 @@
                 width: 213px;
                 height: 220px;
               }
+            }
+            &__red{
+              border-top: 50px solid red;
+              border-right: 50px solid transparent;
+              border-bottom: 50px solid transparent;
+              border-left: 50px solid red;
+              position: absolute;
+              top: 0;
+              left: 0;
+              z-index: 1;
+            }
+            &__sold{
+              top: 18px;
+              font-size: 26px;
+              position: absolute;
+              left: 0;
+              z-index: 2;
+              color: white;
+              transform: rotate(-45deg);
+              letter-spacing: 2px;
+              font-weight: 600;
+              font-size: 20px;
             }
             &__body{
               padding: 16px;
