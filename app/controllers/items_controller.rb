@@ -42,6 +42,8 @@ class ItemsController < ApplicationController
 
   def show
     @item = Item.find(params[:id])
+    @next_item = Item.where("id > ?", @item.id).order("id ASC").first
+    @prev_item = Item.where("id < ?", @item.id).order("id DESC").first
   end
 
   def sell
