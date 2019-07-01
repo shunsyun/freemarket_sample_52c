@@ -71,10 +71,10 @@ ActiveRecord::Schema.define(version: 2019_06_30_091945) do
     t.datetime "updated_at", null: false
     t.bigint "image_id"
     t.bigint "category_id"
+    t.integer "seller_id"
     t.integer "prefecture"
     t.integer "category_l"
     t.string "brand"
-    t.integer "seller_id"
     t.text "image"
     t.integer "buyer_id"
     t.index ["brand_id"], name: "index_items_on_brand_id"
