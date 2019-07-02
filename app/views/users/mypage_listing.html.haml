@@ -24,7 +24,7 @@
             -if item.seller_id == current_user.id
               .tab--content
                 %ul.list--item--li
-                =link_to "/mypage/listing/items/#{item.id}", class: "atode" do
+                =link_to "/items/#{item.id}", class: "atode" do
                   %li.list--item--found
                     .list--item--top
                       %img.mini{src: item.image.url}/
@@ -36,7 +36,7 @@
                         %span 1
                         %i.listicon1.fa.fa-comment
                         %span 0
-                        -if item.sales_status == nil
+                        -if item.sales_status == "出品中"
                           %span.mypage-item-status-start 出品中
                         -else
                           %span.mypage-item-status-stop 公開停止中

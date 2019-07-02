@@ -38,10 +38,6 @@ def mypage_listing
   @item = Item.where(params[:id])
 end
 
-def mypage_show
-  @item = Item.find(params[:id])
-end
-
 private
 
 def set_search
