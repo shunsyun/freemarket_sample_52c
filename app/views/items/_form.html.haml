@@ -51,10 +51,10 @@
                         = f.select :category_l,Item.category_ls.keys, {}, {class:"select--wrap-cat1__default-category1"}
                         %i.fas.fa-angle-down
                       .select--wrap-cat2
-                        = f.collection_select :prefecture2_id, Prefecture2.all, :id, :name, {}, {class: "select--wrap-cat2__default-category2"}
+                        = f.collection_select :children_id, Children.all, :id, :name, {}, {class: "select--wrap-cat2__default-category2"}
                         %i.fas.fa-angle-down
                       .select--wrap-cat3
-                        = f.collection_select :prefecture3_id, Prefecture3.all, :id, :name, {}, {class:"select--wrap-cat3__default-category3"}
+                        = f.collection_select :grandchildren_id, Grandchildren.all, :id, :name, {}, {class:"select--wrap-cat3__default-category3"}
                         %i.fas.fa-angle-down
                     %label.sell--content2__form1__group1__label-size
                       サイズ

@@ -1,4 +1,4 @@
-class Prefecture3 < ActiveHash::Base
+class Grandchildren < ActiveHash::Base
   self.data = [
     {id: 1, name: '---'},
     {id: 2, name: 'Tシャツ'},

@@ -3,6 +3,7 @@ class ItemsController < ApplicationController
   # before_action :authenticate_user!, only:[:index,:show]
   before_action :move_to_sign_in,except: [:index,:show]
   before_action :set_search
+  before_action :set_item
 
   def index
     @q = Item.ransack(params[:q])
@@ -41,7 +42,7 @@ class ItemsController < ApplicationController
   end
 
   def edit
-    @item = Item.find(params[:id])
+    set_item
   end
 
   def update
@@ -56,7 +57,7 @@ class ItemsController < ApplicationController
   end
 
   def show
-    @item = Item.find(params[:id])
+    set_item
     @next_item = Item.where("id > ?", @item.id).order("id ASC").first
     @prev_item = Item.where("id < ?", @item.id).order("id DESC").first
   end
@@ -65,7 +66,7 @@ class ItemsController < ApplicationController
   end
 
   def buy
-    @item = Item.find(params[:id])
+    set_item
   end
 
   def search
@@ -76,7 +77,7 @@ class ItemsController < ApplicationController
   private
 
   def item_params
-    params.require(:item).permit(:name,:price,:description,:image,:status,:delivery_days,:delivery_charge,:prefecture,:prefecture2,:prefecture3,:category_l,:size,:brand,:sales_status).merge(seller_id:current_user.id)
+    params.require(:item).permit(:name,:price,:description,:image,:status,:delivery_days,:delivery_charge,:prefecture,:children,:grandchildren,:category_l,:size,:brand,:sales_status).merge(seller_id:current_user.id)
   end
 
   def move_to_sign_in
@@ -90,6 +91,10 @@ class ItemsController < ApplicationController
 
   def set_search
     @q = Item.search(params[:q])
+  end
+
+  def set_item
+    @item = Item.find(params[:id])
   end
 
 end
