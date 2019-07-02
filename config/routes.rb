@@ -51,6 +51,7 @@ end
 end
 
   get "mypage/profile", to:"users#mypage_profile", as: "mypage/profile"
-
+  get "mypage/listing", to:"users#mypage_listing", as: "mypage/listing"
+  get "mypage/listing/items/:id", to: "users#mypage_show"
 end
 

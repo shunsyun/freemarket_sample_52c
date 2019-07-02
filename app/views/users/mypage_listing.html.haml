@@ -1,0 +1,64 @@
+.wrapper
+  = render partial:"shared/header"
+  = render partial:"shared/bread_crumbs"
+  .wrapper2
+    %main.l--container
+      .l--content
+        %section.list--tab--container--notification--todo
+          %section.list--tab--container
+            %h2.list--tab--head 出品した商品
+            %ul.list--tabs
+              %li.list--tabs__active
+                %h3.list--tabs__active__h3
+                  =link_to "#", class: "list--tabs__active__h3__a" do
+                    出品中
+              %li.list--tabs__inactive
+                %h3.list--tabs__inactive__h3
+                  =link_to "#", class: "list--tabs__inactive__h3__a" do
+                    取引中
+              %li.list--tabs__inactive
+                %h3.list--tabs__inactive__h3
+                  =link_to "#", class: "list--tabs__inactive__h3__a" do
+                    売却済み
+          - @item.each do |item|
+            -if item.seller_id == current_user.id
+              .tab--content
+                %ul.list--item--li
+                =link_to "/items/#{item.id}", class: "atode" do
+                  %li.list--item--found
+                    .list--item--top
+                      %img.mini{src: item.image.url}/
+                    .list--item--body
+                      .list--item--text
+                        = item.name
+                      %time.list--item--body__time
+                        %i.listicon1.fa.fa-heart
+                        %span 1
+                        %i.listicon1.fa.fa-comment
+                        %span 0
+                        -if item.sales_status == "出品中"
+                          %span.mypage-item-status-start 出品中
+                        -else
+                          %span.mypage-item-status-stop 公開停止中
+                      %i.list--icon2.fa.fa-chevron-right
+      .lside
+        = render partial:"shared/side_bar"
+  .aside
+    .aside__banner
+      .aside__banner__left
+        %h2.aside__banner__left__title スマホでかんたんフリマアプリ
+        %p.aside__banner__left__Advertising 今すぐ無料ダウンロード
+        .aside__banner__left__icon
+          .aside__banner__left__icon__image
+            -# =image_tag "mercari_icon.png",size:"68x68"
+          %ul.aside__banner__left__icon__link
+            %li.aside__banner__left__icon__link__app
+              =link_to "#" do
+                -# =image_tag "app--icon.png",size:"133×40"
+            %li.aside__banner__left__icon__link__google
+              =link_to "#" do
+                -# =image_tag "google--icon.png",size:"133×40"
+      .aside__banner__right
+        .aside__banner__right__image
+          -# =image_tag "download_content_pc.png", class:"aside__banner__right__image"
+  = render partial:"shared/footer"

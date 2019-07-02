@@ -34,6 +34,9 @@ end
 def delete
 end
 
+def mypage_listing
+  @item = Item.where(params[:id])
+end
 
 private
 

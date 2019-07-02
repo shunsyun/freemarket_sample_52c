@@ -22,7 +22,7 @@ class Item < ApplicationRecord
   has_one :buyer, class_name:"User"
   # accepts_nested_attributes_for :images
   mount_uploader :image, ImageUploader
-  scope :recent, -> {order('id DESC').limit(4)}
+  scope :recent, -> {order('id DESC').limit(4).where.not(sales_status:"公開停止")}
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to_active_hash :children
