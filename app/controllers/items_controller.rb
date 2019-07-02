@@ -1,7 +1,7 @@
 
 class ItemsController < ApplicationController
   # before_action :authenticate_user!, only:[:index,:show]
-  before_action :move_to_sign_in,except: [:index,:show]
+  before_action :move_to_sign_in,except: [:index,:show, :search]
   before_action :set_search
 
   def index
