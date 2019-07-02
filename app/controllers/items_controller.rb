@@ -3,7 +3,7 @@ class ItemsController < ApplicationController
   # before_action :authenticate_user!, only:[:index,:show]
   before_action :move_to_sign_in,except: [:index,:show]
   before_action :set_search
-  before_action :set_item
+  before_action :set_item,except: [:edit,:show,:buy]
 
   def index
     @q = Item.ransack(params[:q])
@@ -42,7 +42,6 @@ class ItemsController < ApplicationController
   end
 
   def edit
-    set_item
   end
 
   def update
@@ -57,7 +56,6 @@ class ItemsController < ApplicationController
   end
 
   def show
-    set_item
     @next_item = Item.where("id > ?", @item.id).order("id ASC").first
     @prev_item = Item.where("id < ?", @item.id).order("id DESC").first
   end
@@ -66,7 +64,6 @@ class ItemsController < ApplicationController
   end
 
   def buy
-    set_item
   end
 
   def search
