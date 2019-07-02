@@ -71,6 +71,7 @@ ActiveRecord::Schema.define(version: 2019_07_01_094132) do
     t.datetime "updated_at", null: false
     t.bigint "image_id"
     t.bigint "category_id"
+    t.integer "seller_id"
     t.integer "prefecture"
     t.integer "seller_id"
     t.integer "category_l"

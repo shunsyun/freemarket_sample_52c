@@ -2,6 +2,8 @@ class WalletsController < ApplicationController
   
   require "payjp"
 
+  before_action :set_search
+
   def paying
   end
 
@@ -52,4 +54,13 @@ class WalletsController < ApplicationController
       @default_card_information = customer.cards.retrieve(card.card_id)
     end
   end
+
+  private
+
+
+  def set_search
+    @q = Item.search(params[:q])
+  end
+
+
 end

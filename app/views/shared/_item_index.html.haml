@@ -4,7 +4,7 @@
       .pickup__item__box__content__link
         .pickup__item__box__content__link__figure
           = image_tag "#{item.image}",class: "pickup__item__box__content__link__figure__image"
-        -if item.buyer_id != nil
+        -if item.sales_status == "売却済み"
           .pickup__item__box__content__link__red
           .pickup__item__box__content__link__sold
             SOLD

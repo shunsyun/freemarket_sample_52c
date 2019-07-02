@@ -223,6 +223,11 @@
               border-right: 50px solid transparent;
               border-bottom: 50px solid transparent;
               border-left: 50px solid red;
+              position: absolute;
+              top: 0;
+              left: 0;
+              z-index: 1;
+            }
             &__gray{
               border-top: 50px solid gray;
               border-right: 50px solid transparent;
