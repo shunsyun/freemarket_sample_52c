@@ -31,10 +31,16 @@
       &__box__owl-carousel {
         letter-spacing: normal;
         &__stage__outer__active {
+          height: 300px;
+          width: 300px;
+          overflow: hidden;  
           z-index: 0;
           position: relative;
           &__item-inner {
+            display: inline-block;
+            font-size: 0;
             color: #fff;
+            position: relative;
             .owl-lazy {
               height: 300px;
               width: 300px;
@@ -64,13 +70,14 @@
           }  
         }
         &__item-photo {
-          margin-top: -6px;
           &__thumbnails {
             &__inner {
-              float: left;
               .owl-lazy-sub {
+                display: inline-block;
                 height: 60px;
                 width: 60px;
+                font-size: 0px;
+                margin-right: -5.4px;
               }
             }
           }
