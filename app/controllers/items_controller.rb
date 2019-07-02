@@ -3,7 +3,7 @@ class ItemsController < ApplicationController
   # before_action :authenticate_user!, only:[:index,:show]
   before_action :move_to_sign_in,except: [:index,:show]
   before_action :set_search
-  before_action :set_item,except: [:edit,:show,:buy]
+  before_action :set_item, only: [:edit,:show,:buy]
 
   def index
     @q = Item.ransack(params[:q])
