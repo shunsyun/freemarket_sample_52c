@@ -41,6 +41,11 @@ crumb :profile do
   link "プロフィール" 
   parent :user_mypage
 end
+
+crumb :search do |q|
+  link q.name_cont
+  parent :root
+end
 # crumb :projects do
 #   link "Projects", projects_path
 # end
