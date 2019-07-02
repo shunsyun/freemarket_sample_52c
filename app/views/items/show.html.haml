@@ -163,7 +163,7 @@
     - if @item.seller.id == current_user.id
       .btn-edit
         .btn__buy-button
-        =link_to item_path, class:"link-to-edit" do
+        =link_to edit_item_path, class:"link-to-edit" do
           .btn__buy-button__text
             商品を編集する
       .or or

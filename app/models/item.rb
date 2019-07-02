@@ -23,4 +23,8 @@ class Item < ApplicationRecord
   # accepts_nested_attributes_for :images
   mount_uploader :image, ImageUploader
   scope :recent, -> {order('id DESC').limit(4)}
+
+  extend ActiveHash::Associations::ActiveRecordExtensions
+  belongs_to_active_hash :prefecture2
+  belongs_to_active_hash :prefecture3
 end

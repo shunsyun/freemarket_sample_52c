@@ -40,11 +40,15 @@ class ItemsController < ApplicationController
     end
   end
 
+  def edit
+    @item = Item.find(params[:id])
+  end
+
   def update
     item = Item.find(params[:id])
     if item.seller_id == current_user.id
       item.update(item_params)
-      redirect_to root_path
+      redirect_to item_path
     end
   end
 
@@ -72,7 +76,7 @@ class ItemsController < ApplicationController
   private
 
   def item_params
-    params.require(:item).permit(:name,:price,:description,:image,:status,:delivery_days,:delivery_charge,:prefecture,:category_l,:size,:brand,:sales_status).merge(seller_id:current_user.id)
+    params.require(:item).permit(:name,:price,:description,:image,:status,:delivery_days,:delivery_charge,:prefecture,:prefecture2,:prefecture3,:category_l,:size,:brand,:sales_status).merge(seller_id:current_user.id)
   end
 
   def move_to_sign_in

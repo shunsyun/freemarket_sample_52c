@@ -31,7 +31,7 @@ Rails.application.routes.draw do
     end
   end
   
-  resources :items, only:[:index, :show,:create,:new,:destroy,:update]
+  resources :items, only:[:index, :show, :create, :new, :destroy, :update, :edit]
 
   resources :users, only:[:index, :show, :new] do
   collection do
