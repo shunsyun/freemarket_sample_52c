@@ -3,7 +3,7 @@ class ItemsController < ApplicationController
   # before_action :authenticate_user!, only:[:index,:show]
   before_action :move_to_sign_in,except: [:index,:show]
   before_action :set_search
-  before_action :set_item, only: [:edit,:show,:buy]
+  before_action :set_item, only: [:edit,:show,:buy,:destroy,:update]
 
   def index
     @q = Item.ransack(params[:q])
@@ -34,7 +34,6 @@ class ItemsController < ApplicationController
   end
   
   def destroy
-    item = Item.find(params[:id])
     if item.seller_id == current_user.id
       item.destroy
       redirect_to root_path
@@ -45,7 +44,6 @@ class ItemsController < ApplicationController
   end
 
   def update
-    item = Item.find(params[:id])
     if item.seller_id == current_user.id
       item.update(item_params)
       redirect_to item_path
