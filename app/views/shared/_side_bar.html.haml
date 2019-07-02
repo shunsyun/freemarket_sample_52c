@@ -76,8 +76,15 @@
       =link_to "#", class:"mypage--nav__ul__li__item2" do
         発送元・お届け先住所変更
         %i.fa.fa-chevron-right
+    
     %li.mypage--nav__ul__li
-      =link_to new_wallet_path, class:"mypage--nav__ul__li__item2" do
+    -@card = Wallet.where(user_id: current_user.id).first
+    -if @card.blank?
+      = link_to paying_wallets_path(current_user.id), class:"mypage--nav__ul__li__item2" do
+        支払い方法
+        %i.fa.fa-chevron-right
+    -else 
+      = link_to wallet_path(current_user.id), class:"mypage--nav__ul__li__item2" do
         支払い方法
         %i.fa.fa-chevron-right
     %li.mypage--nav__ul__li

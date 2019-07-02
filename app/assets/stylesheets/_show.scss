@@ -31,15 +31,26 @@
       &__box__owl-carousel {
         letter-spacing: normal;
         &__stage__outer__active {
+          height: 300px;
+          width: 300px;
+          overflow: hidden;  
           z-index: 0;
           position: relative;
           &__item-inner {
+            display: inline-block;
+            font-size: 0;
             color: #fff;
+            position: relative;
             .owl-lazy {
               height: 300px;
               width: 300px;
             }
           }
+          &__red{
+            border-top: 50px solid red;
+            border-right: 50px solid transparent;
+            border-bottom: 50px solid transparent;
+            border-left: 50px solid red;
           &__gray{
             border-top: 50px solid gray;
             border-right: 50px solid transparent;
@@ -61,16 +72,18 @@
             letter-spacing: 2px;
             font-weight: 600;
             font-size: 20px;
+          }
           }  
         }
         &__item-photo {
-          margin-top: -6px;
           &__thumbnails {
             &__inner {
-              float: left;
               .owl-lazy-sub {
+                display: inline-block;
                 height: 60px;
                 width: 60px;
+                font-size: 0px;
+                margin-right: -5.4px;
               }
             }
           }
@@ -248,6 +261,22 @@
       width: 600px;
       line-height: 56px;
       margin-top:10px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      font-weight: 600;
+      font-size: 23px;
+      .link-to-delete {
+        color: #fff;
+        text-decoration: none ;
+      }
+    }
+    .btn-sold {
+      background-color: #696969;
+      color: #fff;
+      height: 56px;
+      width: 600px;
+      line-height: 56px;
       margin-left: auto;
       margin-right: auto;
       text-align: center;

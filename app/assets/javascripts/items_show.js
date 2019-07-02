@@ -6,12 +6,12 @@ $(document).on('turbolinks:load', function () {
 
   $('.owl-lazy-sub').mouseover(function(){
     var index = $('.owl-lazy-sub').index(this);
-      setTimeout(function(){
-        $('#main').animate({
+    setTimeout(function(){
+      $('#main').animate({
         left: slideWidth * -index
-      },800);
+      },500);
     },500);
-  }) 
+  })
 
   $("#owls").children('img').css("opacity", '0.4');
   $("#owls").children('img').eq(0).css("opacity", '1.0');
