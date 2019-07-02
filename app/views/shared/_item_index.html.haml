@@ -4,6 +4,10 @@
       .pickup__item__box__content__link
         .pickup__item__box__content__link__figure
           = image_tag "#{item.image}",class: "pickup__item__box__content__link__figure__image"
+        -if item.buyer_id != nil
+          .pickup__item__box__content__link__red
+          .pickup__item__box__content__link__sold
+            SOLD
         -if item.sales_status == "公開停止"
           .pickup__item__box__content__link__gray
           .pickup__item__box__content__link__sold

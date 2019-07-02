@@ -27,6 +27,16 @@ crumb :wallet do
   parent :user_mypage
 end
 
+crumb :wallet_paying do
+  link "支払い方法" 
+  parent :user_mypage
+end
+
+crumb :wallet_show do
+  link "支払い方法" 
+  parent :user_mypage
+end
+
 crumb :profile do
   link "プロフィール" 
   parent :user_mypage

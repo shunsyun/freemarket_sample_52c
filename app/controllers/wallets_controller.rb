@@ -39,7 +39,7 @@ class WalletsController < ApplicationController
       customer.delete
       card.delete
     end
-      # redirect_to paying_users_path
+      redirect_to action: "paying"
   end
 
   def show

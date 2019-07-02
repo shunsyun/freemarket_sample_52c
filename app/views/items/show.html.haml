@@ -14,10 +14,10 @@
               .section__main__box__owl-carousel__stage__outer__active
                 .section__main__box__owl-carousel__stage__outer__active__item-inner{ id: 'main' }
                   = image_tag @item.image.url, alt: "画像1", class: "owl-lazy"
-                  = image_tag @item.image.url, alt: "画像1", class: "owl-lazy"
-                  = image_tag @item.image.url, alt: "画像1", class: "owl-lazy"
-                  = image_tag @item.image.url, alt: "画像1", class: "owl-lazy"
-                  = image_tag @item.image.url, alt: "画像1", class: "owl-lazy"
+                -if @item.buyer_id != nil
+                  .section__main__box__owl-carousel__stage__outer__active__red
+                  .section__main__box__owl-carousel__stage__outer__active__sold
+                    SOLD  
                 - if @item.sales_status == "公開停止"
                   .section__main__box__owl-carousel__stage__outer__active__gray
                   .section__main__box__owl-carousel__stage__outer__active__sold
@@ -154,6 +154,25 @@
       %span.section__item-price__shipping-fee
         = @item.delivery_charge
         -# 送料は購入者負担
+    -if @item.buyer_id != nil
+      .btn-sold
+        .btn__buy-button
+          .btn__buy-button__text
+            売り切れました
+    -else    
+      - unless @item.seller.id == current_user.id
+        .btn
+          .btn__buy-button
+          =link_to item_buy_purchase_index_path(@item.id), class:"link-to-buy" do
+            .btn__buy-button__text
+              購入画面に進む        
+      -else
+        .btn-edit
+          .btn__buy-button
+          =link_to item_path, class:"link-to-edit" do
+            .btn__buy-button__text
+              商品を編集する
+        .or or
     - if @item.seller.id == current_user.id
       .btn-edit
         .btn__buy-button

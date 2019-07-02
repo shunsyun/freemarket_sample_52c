@@ -46,6 +46,11 @@
               width: 300px;
             }
           }
+          &__red{
+            border-top: 50px solid red;
+            border-right: 50px solid transparent;
+            border-bottom: 50px solid transparent;
+            border-left: 50px solid red;
           &__gray{
             border-top: 50px solid gray;
             border-right: 50px solid transparent;
@@ -67,6 +72,7 @@
             letter-spacing: 2px;
             font-weight: 600;
             font-size: 20px;
+          }
           }  
         }
         &__item-photo {
@@ -255,6 +261,22 @@
       width: 600px;
       line-height: 56px;
       margin-top:10px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      font-weight: 600;
+      font-size: 23px;
+      .link-to-delete {
+        color: #fff;
+        text-decoration: none ;
+      }
+    }
+    .btn-sold {
+      background-color: #696969;
+      color: #fff;
+      height: 56px;
+      width: 600px;
+      line-height: 56px;
       margin-left: auto;
       margin-right: auto;
       text-align: center;
