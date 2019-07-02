@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+before_action :set_search
 
 def index
 end
@@ -31,6 +32,13 @@ def mypage_profile
 end
 
 def delete
+end
+
+
+private
+
+def set_search
+  @q = Item.search(params[:q])
 end
 
 
