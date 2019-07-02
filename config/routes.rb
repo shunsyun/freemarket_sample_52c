@@ -30,7 +30,9 @@ Rails.application.routes.draw do
       post 'delete', to: 'wallets#delete'
     end
   end
-  resources :items, only:[:index, :show,:create,:new,:destroy,:update]
+  
+  resources :items, only:[:index, :show, :create, :new, :destroy, :update, :edit]
+
   resources :users, only:[:index, :show, :new] do
   collection do
     get "number"
