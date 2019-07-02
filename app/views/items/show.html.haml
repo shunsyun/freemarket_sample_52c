@@ -239,15 +239,17 @@
 
   .section-nav
     .section-nav__item
-      .section-nav__item__left
-      =link_to "#", class:"link-to-prev" do
-        %i.fa.fa-chevron-left
-        スカイタワーSKT-1
-    .section-nav__item
-      .section-nav__item__right
-      =link_to "#", class:"link-to-next" do
-        キタムラ フェルトトートバッグ
-        %i.fa.fa-chevron-right
+      -if @prev_item.present?
+        .section-nav__item__left
+          = link_to item_path(@prev_item), class: 'link-to-prev' do
+            %i.fa.fa-chevron-left
+              = @prev_item.name
+      .section-nav__item
+      -if @next_item.present?
+        .section-nav__item__right
+          = link_to item_path(@next_item), class:"link-to-next" do
+            =@next_item.name
+            %i.fa.fa-chevron-right
 
   .section-social
     .section-social__icons
