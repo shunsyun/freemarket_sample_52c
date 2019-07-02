@@ -218,13 +218,8 @@
           %p.form-info-text
             ※ 本人情報は正しく入力してください。会員登録後、修正するにはお時間を頂く場合があります。
           .l-single-content
-            %input{name: "after_save_callback", type: "hidden", value: ""}/
             .form-group
-              .g-recaptcha.signup-recaptcha{"data-sitekey" => "6LfZGCYTAAAAAHoK-s7Lg5OdYg5Fq4susvALmZoc"}
-                %div{style: "width: 304px; height: 78px;"}
-                  %div
-                    %iframe{frameborder: "0", height: "78", name: "a-6lx5t1ttbgzm", role: "presentation", sandbox: "allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox", scrolling: "no", src: "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LfZGCYTAAAAAHoK-s7Lg5OdYg5Fq4susvALmZoc&co=aHR0cHM6Ly93d3cubWVyY2FyaS5jb206NDQz&hl=ja&v=v1559543665173&size=normal&cb=lcl4g9sun65d", width: "304"}
-                  %textarea#g-recaptcha-response.g-recaptcha-response{name: "g-recaptcha-response", style: "width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"}
+              =image_tag "https://i.gyazo.com/d1c693a279de98c05670163a3e2079c6.png", alt: "robot", class: "robot_img"
             .form-group
               %p.l-single-text.text-center
                 「次へ進む」のボタンを押すことにより、
@@ -236,20 +231,4 @@
                 %a.decolation-blue{href: "/jp/help_center/article/423/", target: "_blank"}
                   本人情報の登録について
                   %i.fas.fa-chevron-right
-
-  %footer.single-footer
-    %nav
-      %ul.single-footer__menu
-        %li.single-footer__menu__content
-          = link_to "", class: 'single-footer__menu__content__portion' do
-            プライバシーポリシー
-        %li.single-footer__menu__content
-          = link_to "", class: 'single-footer__menu__content__portion' do
-            メルカリ利用規約
-        %li.single-footer__menu__content
-          = link_to "", class: 'single-footer__menu__content__portion' do
-            特定商取引に関する表記
-      = link_to class: 'single-footer-logo' do
-        =image_tag "//www-mercari-jp.akamaized.net/assets/img/common/common/logo-gray.svg?2855175014", alt: "mercari", class: "footer-logo"
-      %p.footer-century
-        %small © 2019 Mercari
+  = render partial: "shared/regi_footer"
