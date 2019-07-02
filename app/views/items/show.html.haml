@@ -142,7 +142,7 @@
       %span.section__item-price__shipping-fee
         = @item.delivery_charge
         -# 送料は購入者負担
-    -if @item.buyer_id == 1
+    -if @item.buyer_id != nil
       .btn-sold
         .btn__buy-button
           .btn__buy-button__text
