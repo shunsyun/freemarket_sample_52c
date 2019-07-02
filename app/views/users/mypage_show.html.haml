@@ -1,0 +1,244 @@
+/ぱんクズ
+.wrapper-show
+  = render partial:"shared/header"
+  = render partial:"shared/bread_crumbs"
+  .section
+    %h1.section__item-name
+      = @item.name
+      -# SUIT SELECT ブラックシャツ パンクコーデ v系
+    .section__main
+      .section__main__box
+        .section__main__box__owl-carousel
+          .section__main__box__owl-carousel__stage
+            .section__main__box__owl-carousel__stage__outer
+              .section__main__box__owl-carousel__stage__outer__active
+                .section__main__box__owl-carousel__stage__outer__active__item-inner{ id: 'main' }
+                  = image_tag @item.image.url, alt: "画像1", class: "owl-lazy"
+      -#   .section__main__box__owl-carousel
+      -#     .section__main__box__owl-carousel__stage
+      -#       .section__main__box__owl-carousel__stage__outer
+      -#         .section__main__box__owl-carousel__stage__outer__active
+      -#           .section__main__box__owl-carousel__stage__outer__active__item-inner
+      -#             = image_tag "m38749583053_1.jpg", alt: "画像1", class: "owl-lazy"
+      -#             /↑商品のメイン画像
+      -#     .section__main__box__owl-carousel__item-photo
+      -#       .section__main__box__owl-carousel__item-photo__thumbnails
+      -#         %span
+      -#         .section__main__box__owl-carousel__item-photo__thumbnails__inner
+      -#           = image_tag "m38749583053_2.jpg", alt: "画像2", class: "owl-lazy-sub"
+      -#       .section__main__box__owl-carousel__item-photo__thumbnails
+      -#         .section__main__box__owl-carousel__item-photo__thumbnails__inner
+      -#           = image_tag "m38749583053_3.jpg", alt: "画像3", class: "owl-lazy-sub"
+                /↑商品のサムネイル画像
+
+      /ここまでで左半分の商品写真部分
+      .table
+        .table__tr
+          .table__tr__th
+            .table__tr__th__exhibitor
+              %span 出品者
+          .table__tr__td
+            .table__tr__td__exhibitor-name
+            =link_to "#", class:"link-to-exhibitor" do
+              %span 
+                =@item.seller.nickname
+            .table__tr__td__face-icon
+              .table__tr__td__face-icon__good
+                = image_tag "good.png", class: "good"
+              .table__tr__td__face-icon__face-count
+                999
+              .table__tr__td__face-icon__normal
+                = image_tag "normal.png", class: "normal"
+              .table__tr__td__face-icon__face-count
+                999
+              .table__tr__td__face-icon__bad
+                = image_tag "bad.png", class: "bad"
+              .table__tr__td__face-icon__face-count
+                999
+        .table__tr
+          .table__tr__th
+            .table__tr__th__category
+              %span カテゴリー
+          .table__tr__td
+            .table__tr__td__category-right
+              .table__tr__td__category-right-l
+              =link_to "#", class:"link-to-category" do
+                %span 
+                  =@item.category_l
+              .table__tr__td__category-right-m
+              =link_to "#", class:"link-to-category" do
+                %i.fa.fa-chevron-right トップス
+              .table__tr__td__category-right-s
+              =link_to "#", class:"link-to-category" do
+                %i.fa.fa-chevron-right シャツ
+        .table__tr
+          .table__tr__th-brand-following
+            .table__tr__th-brand-following__left
+              %span ブランド
+          .table__tr__td-brand-following
+            .table__tr__td-brand-following__right
+              %p
+                =@item&.brand
+        .table__tr
+          .table__tr__th-brand-following
+            .table__tr__th-brand-following__left
+              %span 商品のサイズ
+          .table__tr__td-brand-following
+            .table__tr__td-brand-following__right
+              %span
+                = @item&.size
+        .table__tr
+          .table__tr__th-brand-following
+            .table__tr__th-brand-following__left
+              %span 商品の状態
+          .table__tr__td-brand-following
+            .table__tr__td-brand-following__right
+              %span
+                =@item.status
+        .table__tr
+          .table__tr__th-brand-following
+            .table__tr__th-brand-following__left
+              %span 配送料の負担
+          .table__tr__td-brand-following
+            .table__tr__td-brand-following__right
+              %span
+                = @item.delivery_charge
+        .table__tr
+          .table__tr__th-brand-following
+            .table__tr__th-brand-following__left
+              %span 配送の方法
+          .table__tr__td-brand-following
+            .table__tr__td-brand-following__right
+              %span 未定
+        .table__tr
+          .table__tr__th-brand-following
+            .table__tr__th-brand-following__left
+              %span 配送元地域
+          .table__tr__td-brand-following
+            .table__tr__td-brand-following__right-region
+            =link_to "#", class:"link-to-region" do
+              %span
+                =@item.prefecture
+        .table__tr
+          .table__tr__th-brand-following
+            .table__tr__th--brand-following__left
+              %span 発送日の目安
+          .table__tr__td-brand-following
+            .table__tr__td-brand-following__right
+              %span
+                =@item.delivery_days
+
+        /↓ここから料金表示
+    .section__item-price
+      %span.section__item-price__yen
+        = converting_to_mark(@item.price)
+        -# ¥ 100,000,000
+      %span.section__item-price__tax
+        (税込)
+      %span.section__item-price__shipping-fee
+        = @item.delivery_charge
+        -# 送料は購入者負担
+    - unless @item.seller.id == current_user.id
+      .btn
+        .btn__buy-button
+        =link_to item_buy_purchase_index_path(@item.id), class:"link-to-buy" do
+          .btn__buy-button__text
+            購入画面に進む
+    -else
+      .btn-edit
+        .btn__buy-button
+        =link_to item_path, class:"link-to-edit" do
+          .btn__buy-button__text
+            商品を編集する
+      .or or
+      .btn-delete
+        .btn__buy-button
+        =link_to item_path, class:"link-to-delete",method: :delete do
+          .btn__buy-button__text
+            商品を削除する
+    .section__item-description
+      .section__item-description__text
+        .section__item-description__text__field
+          = @item.description
+          -# SUIT SELECTのブラックシャツです。
+          -# 赤の刺繍が入っていてとてもお洒落です。
+          -# サイズ表記がありませんが、細身のデザインで SサイズからMサイズかと思います。
+          -# パンクスコーデや綺麗目V系コーデにカッコよく着て頂けると思います。
+          -# 襟元に少し白い汚れがありますが比較的綺麗な状態です。
+          -# 中古のお品にご理解頂ける方のみでお願いします。
+    .section__item-bottom
+      .section__item-bottom__content
+        .section__item-bottom__content__good
+          .btn.item-good-button
+            %i.fa.fa-heart
+            いいね！
+        .section__item-bottom__content__report
+          .btn.item-report-button
+            %i.fa.fa-flag
+            不適切な商品の報告
+        .section__item-bottom__content__approach
+          .section__item-bottom__content__approach__text
+          =link_to "#", class:"safe-and-secure-initiatives" do
+            %i.fa.fa-lock
+            あんしん・あんぜんへの取り組み
+  .section-bottom
+    .section-bottom__area
+      .section-bottom__area-description
+        相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
+        /ここにform_for入る予定
+    .section-bottom__area-comment-field
+      %input.comment-field-default{name: "redirect_url_key", type: "hidden", value: "item_detail"}
+      = text_area :name, type: "text", class: "comment-box"
+    .btn
+      .btn__comment
+        .btn__comment__button
+        =link_to "#", class:"link-to-comment" do
+          コメントする
+
+  .section-nav
+    .section-nav__item
+      .section-nav__item__left
+      =link_to "#", class:"link-to-prev" do
+        %i.fa.fa-chevron-left
+        スカイタワーSKT-1
+    .section-nav__item
+      .section-nav__item__right
+      =link_to "#", class:"link-to-next" do
+        キタムラ フェルトトートバッグ
+        %i.fa.fa-chevron-right
+
+  .section-social
+    .section-social__icons
+      .section-social__icons__box
+        .section-social__icons__box__facebook
+        =link_to "#", class:"link-to-sns" do
+          = image_tag "facebook_icon.png", alt: "facebookアイコン ", class: "icons"
+        .section-social__icons__box__twitter
+        =link_to "#", class:"link-to-sns" do
+          = image_tag "twitter_icon.png", alt: "twitterアイコン ", class: "icons"
+        .section-social__icons__box__line
+        =link_to "#", class:"link-to-sns" do
+          = image_tag "line_icon.png", alt: "lineアイコン ", class: "icons"
+        .section-social__icons__box__pinterest
+        =link_to "#", class:"link-to-sns" do
+          = image_tag "pinterest_icon.png", alt: "pinterestアイコン ", class: "icons"
+
+  .section-profile
+    .section-profile__text
+      .section-profile__text__box
+      =link_to "#", class:"link-to-profile" do
+        りんね＠プロフィールを必読ください。さんのその他の出品
+
+  .section-other
+    .section-other__items
+      .section-other__items__box
+      =link_to "#", class:"link-to-other-items" do
+        = image_tag "item.jpg", alt: "その他のアイテム", class: "other-items"
+        .section-other__items__box-description
+          春画だよー
+          .section-other__items__box-description__price
+            ¥ 2,680
+          .section-other__items__box-description__tax
+            (税込)
+  = render partial:"shared/aside"  
+  = render partial:"shared/footer"
