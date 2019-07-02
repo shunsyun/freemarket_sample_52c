@@ -4,7 +4,7 @@
 }
 
 .header{
-  height:120px;
+  // height:120px;
   width:100%;
   position: relative;
   background-color:white;
@@ -13,7 +13,7 @@
   &__box{
     width: 1020px;
     margin: 0 auto;
-    padding: 8px 0 0;
+    padding: 8px 0;
     background-color:white;
     &__top{
       display: flex;
