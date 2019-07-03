@@ -26,9 +26,11 @@ def identification
 end
 
 def mypage
+  @user = User.find(current_user.id)
 end
 
 def mypage_profile
+  @user = User.find(current_user.id)
 end
 
 def delete
