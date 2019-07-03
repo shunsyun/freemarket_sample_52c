@@ -11,7 +11,7 @@
             .setting__profile-icon
               %figure.setting__profile-icon__f
                 = image_tag "//static.mercdn.net/thumb/members/635145766.jpg?1481553385", class:"setting__profile-icon__f__img"
-              %input{name: "nickname", placeholder: "例)AYA☆セール中", type: "text", value: "ニックネーム", class:"setting__profile-icon__input-default"}
+              %input{name: "nickname", placeholder: "例)AYA☆セール中", type: "text", value: "#{current_user.nickname}", class:"setting__profile-icon__input-default"}
             .setting__profile-content
               %textarea{class:"setting__profile-content__textarea-default", name: "introduction", placeholder: "例）こんにちは☆ ご覧いただきありがとうございます！かわいいものやきれいめオフィスカジュアル中心に出品しています。服のサイズは主に9号です。気持ちよくお取引できるよう心がけていますので、商品や発送方法などご質問がありましたらお気軽にどうぞ♪"}
               %input{class:"setting__profile-content__input", name: "after_save_callback", type: "hidden", value: "https://www.m#rc#ri.com/jp/mypage/profile/"}
