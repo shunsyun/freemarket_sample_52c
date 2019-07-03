@@ -8,7 +8,15 @@
       #sell--container
         %div
           .sell--container--inner
-            %h2.l--single--head 商品の情報を入力
+            %h2.l--single--head
+              商品の情報を入力
+            = form_for @item do |f|
+              - if @item.errors.any?
+                .error_form
+                  %h2= "#{@item.errors.full_messages.count}件のエラーが発生しました。"
+                  %ul
+                    - @item.errors.full_messages.each do |message|
+                      %li= message
             = form_with model:@item, class:"sell--form",local: true do |f|
               =f.hidden_field :sales_status,{value:"出品中"}
               .sell--upload--box
