@@ -20,6 +20,8 @@
         - breadcrumb :wallet_show
       -when ['items','search']
         - breadcrumb :search,@q
+      -when ['users','mypage_listing']
+        - breadcrumb :sell_item
       = breadcrumbs separator: " &nbsp;&nbsp;&#12297;&nbsp; "
       -# 
     -#   %li.bread__crumbs__ul__li

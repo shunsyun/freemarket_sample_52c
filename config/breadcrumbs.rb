@@ -46,6 +46,11 @@ crumb :search do |q|
   link q.name_cont
   parent :root
 end
+
+crumb :sell_item do |q|
+  link "出品した商品"
+  parent :user_mypage
+end
 # crumb :projects do
 #   link "Projects", projects_path
 # end
